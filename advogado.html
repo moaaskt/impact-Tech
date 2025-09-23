@@ -3,7 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advogado - ImpactTech</title>
+    <title>Advogado Digital com IA - Carreira Jurídica | ImpactTech</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Descubra como se tornar um Advogado Digital especializado em IA jurídica. Aprenda sobre LegalTech, análise de contratos automatizada e construa uma carreira sólida no Direito.">
+    <meta name="keywords" content="advogado digital, direito, legaltech, IA jurídica, carreira direito, salário advogado, análise contratos, pesquisa jurídica, direito civil, direito penal, direito trabalhista">
+    <meta name="author" content="ImpactTech">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Advogado Digital com IA - Carreira Jurídica">
+    <meta property="og:description" content="Transforme sua carreira jurídica com IA. Aprenda as principais ferramentas de LegalTech e construa uma trajetória de sucesso no Direito Digital.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://impacttech.com.br/advogado">
+    <meta property="og:image" content="https://impacttech.com.br/assets/imgs/advogado-og.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Advogado Digital com IA - Carreira Jurídica">
+    <meta name="twitter:description" content="Descubra como a IA está revolucionando o Direito e como você pode se destacar nessa área.">
+    <meta name="twitter:image" content="https://impacttech.com.br/assets/imgs/advogado-twitter.jpg">
+    
     <link rel="icon" type="image/svg+xml" href="Assets/imgs/favicon.svg">
     <link rel="shortcut icon" href="Assets/imgs/favicon.svg">
     <link rel="apple-touch-icon" href="Assets/imgs/favicon.svg">
@@ -13,6 +32,502 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="Assets/Css/career-page.css">
+    
+    <style>
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skill-card {
+            background: linear-gradient(135deg, #c0392b 0%, #8e44ad 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .skill-card h3 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-icon {
+            font-size: 1.5rem;
+            color: #ffd700;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+        
+        /* Enhanced Timeline */
+        .career-timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 3rem 0;
+        }
+        
+        .career-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background: linear-gradient(to bottom, #c0392b, #8e44ad, #3498db, #e74c3c, #f39c12);
+            transform: translateX(-50%);
+            border-radius: 3px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin: 4rem 0;
+            width: 50%;
+            padding: 0 3rem;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            text-align: left;
+        }
+        
+        .timeline-content {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8ecff 100%);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            position: relative;
+            border: 2px solid rgba(192, 57, 43, 0.2);
+            transition: all 0.4s ease;
+        }
+        
+        .timeline-content:hover {
+            transform: scale(1.05);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+        }
+        
+        .timeline-icon {
+            position: absolute;
+            top: 50%;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #c0392b, #e74c3c);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            transform: translateY(-50%);
+            border: 6px solid white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+        
+        .timeline-item:nth-child(2) .timeline-icon {
+            background: linear-gradient(135deg, #8e44ad, #9b59b6);
+        }
+        
+        .timeline-item:nth-child(3) .timeline-icon {
+            background: linear-gradient(135deg, #3498db, #5dade2);
+        }
+        
+        .timeline-item:nth-child(4) .timeline-icon {
+            background: linear-gradient(135deg, #e74c3c, #ec7063);
+        }
+        
+        .timeline-item:nth-child(5) .timeline-icon {
+            background: linear-gradient(135deg, #f39c12, #f7dc6f);
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-icon {
+            right: -42px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-icon {
+            left: -42px;
+        }
+        
+        .timeline-content h3 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .timeline-content p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .salary-range {
+            color: #c0392b;
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin: 1rem 0;
+            display: block;
+        }
+        
+        .experience-level {
+            color: #666;
+            font-style: italic;
+            font-size: 1rem;
+        }
+        
+        /* Salary Chart */
+        .salary-chart {
+            background: linear-gradient(135deg, #c0392b 0%, #8e44ad 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-top: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .salary-chart h2 {
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .chart-bar {
+            margin-bottom: 1.5rem;
+        }
+
+        .bar-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .bar-label {
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .bar-value {
+            color: #ffd700;
+            font-weight: 700;
+            font-size: 1rem;
+            background: rgba(255, 215, 0, 0.2);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .bar-container {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            height: 50px;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 2s ease-in-out;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 1rem;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .bar-fill.estagiario {
+            background: linear-gradient(90deg, #c0392b, #e74c3c);
+            width: 25%;
+        }
+        
+        .bar-fill.junior {
+            background: linear-gradient(90deg, #8e44ad, #9b59b6);
+            width: 45%;
+        }
+        
+        .bar-fill.pleno {
+            background: linear-gradient(90deg, #3498db, #5dade2);
+            width: 70%;
+        }
+        
+        .bar-fill.socio {
+            background: linear-gradient(90deg, #e74c3c, #ec7063);
+            width: 90%;
+        }
+        
+        .bar-fill.consultor {
+            background: linear-gradient(90deg, #f39c12, #f7dc6f);
+            width: 100%;
+        }
+        
+        /* AI Tools Section */
+        .ai-tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .ai-tool-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
+            border: 2px solid rgba(192, 57, 43, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ai-tool-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(192, 57, 43, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .ai-tool-card:hover::before {
+            left: 100%;
+        }
+        
+        .ai-tool-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(192, 57, 43, 0.2);
+            border-color: rgba(192, 57, 43, 0.3);
+        }
+
+        .ai-tool-card:focus {
+            outline: 3px solid rgba(192, 57, 43, 0.5);
+            outline-offset: 2px;
+        }
+        
+        .ai-tool-card h4 {
+            color: #c0392b;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .ai-tool-icon {
+            font-size: 1.5rem;
+            background: linear-gradient(135deg, #c0392b 0%, #8e44ad 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .ai-tool-card p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .impact-stat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+            background: linear-gradient(135deg, rgba(192, 57, 43, 0.1) 0%, rgba(142, 68, 173, 0.1) 100%);
+            border-radius: 10px;
+            border: 1px solid rgba(192, 57, 43, 0.2);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #c0392b 0%, #8e44ad 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .ai-tools-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .skill-card, .ai-tool-card {
+                padding: 1.5rem;
+            }
+
+            .ai-tool-card h4 {
+                font-size: 1.1rem;
+            }
+
+            .stat-number {
+                font-size: 1.5rem;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                text-align: left;
+                padding: 0 1rem 0 4rem;
+            }
+            
+            .career-timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-icon {
+                left: -20px !important;
+                right: auto !important;
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+            
+            .bar-info {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0.5rem;
+            }
+            
+            .bar-label {
+                text-align: center;
+            }
+
+            .salary-chart, .career-timeline {
+                padding: 1.5rem;
+            }
+
+            .bar-container {
+                height: 40px;
+            }
+
+            .bar-fill {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .skill-card, .ai-tool-card, .salary-chart, .career-timeline {
+                padding: 1rem;
+            }
+
+            .timeline-content {
+                padding: 1rem;
+            }
+
+            .skill-card h3, .timeline-content h3 {
+                font-size: 1.1rem;
+            }
+
+            .ai-tool-card h4 {
+                font-size: 1rem;
+            }
+        }
+
+        /* Animation for bars */
+        @keyframes fillBar {
+            from { width: 0%; }
+            to { width: var(--target-width); }
+        }
+
+        .bar-fill.animate {
+            animation: fillBar 2s ease-in-out;
+        }
+
+        /* Accessibility improvements */
+        .skill-card:focus,
+        .ai-tool-card:focus,
+        .timeline-content:focus {
+            outline: 2px solid #ffd700;
+            outline-offset: 2px;
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .skill-card, .ai-tool-card, .salary-chart, .career-timeline {
+                border: 2px solid #ffffff;
+            }
+
+            .skill-tag, .salary-range, .experience-level {
+                border: 1px solid #ffffff;
+            }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            .skill-card, .ai-tool-card, .timeline-content {
+                transition: none;
+            }
+
+            .bar-fill {
+                transition: none;
+            }
+
+            .skill-tag:hover {
+                transform: none;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -87,6 +602,56 @@
                 </div>
             </section>
 
+            <!-- Legal Areas Section -->
+            <section class="content-section">
+                <h2>Áreas de Especialização</h2>
+                <div class="skills-grid">
+                    <div class="skill-card" tabindex="0" role="button" aria-label="Direito Civil">
+                        <h3><i class="fas fa-balance-scale skill-icon" aria-hidden="true"></i>Direito Civil</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Contratos</span>
+                            <span class="skill-tag">Família</span>
+                            <span class="skill-tag">Sucessões</span>
+                            <span class="skill-tag">Responsabilidade Civil</span>
+                            <span class="skill-tag">Direitos Reais</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card" tabindex="0" role="button" aria-label="Direito Penal">
+                        <h3><i class="fas fa-gavel skill-icon" aria-hidden="true"></i>Direito Penal</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Defesa Criminal</span>
+                            <span class="skill-tag">Crimes Econômicos</span>
+                            <span class="skill-tag">Júri Popular</span>
+                            <span class="skill-tag">Execução Penal</span>
+                            <span class="skill-tag">Crimes Digitais</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card" tabindex="0" role="button" aria-label="Direito Trabalhista">
+                        <h3><i class="fas fa-briefcase skill-icon" aria-hidden="true"></i>Direito Trabalhista</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">CLT</span>
+                            <span class="skill-tag">Rescisões</span>
+                            <span class="skill-tag">Acidentes de Trabalho</span>
+                            <span class="skill-tag">Sindicatos</span>
+                            <span class="skill-tag">Previdenciário</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card" tabindex="0" role="button" aria-label="Direito Digital">
+                        <h3><i class="fas fa-shield-alt skill-icon" aria-hidden="true"></i>Direito Digital</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">LGPD</span>
+                            <span class="skill-tag">Marco Civil</span>
+                            <span class="skill-tag">E-commerce</span>
+                            <span class="skill-tag">Propriedade Intelectual</span>
+                            <span class="skill-tag">Compliance Digital</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- Skills Section -->
             <section class="content-section">
                 <h2>Competências Essenciais</h2>
@@ -114,27 +679,127 @@
                 </div>
             </section>
 
-            <!-- Career Path Section -->
+            <!-- Career Timeline Section -->
             <section class="content-section">
                 <h2>Trajetória de Carreira</h2>
-                <div class="path-timeline">
-                    <div class="path-item">
-                        <div class="path-icon">
-                            <i class="fas fa-graduation-cap"></i>
+                <div class="career-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
                         </div>
-                        <div class="path-content">
-                            <h3>Graduação em Direito</h3>
-                            <p>Formação jurídica e aprovação na OAB</p>
+                        <div class="timeline-content" tabindex="0" role="article" aria-label="Estagiário de Direito">
+                            <h3>Estagiário de Direito</h3>
+                            <p>Início da jornada jurídica com acompanhamento de processos, pesquisa legal e elaboração de petições simples. Período de aprendizado prático e desenvolvimento das primeiras competências profissionais.</p>
+                            <span class="salary-range">R$ 1.200 - R$ 2.000</span>
+                            <span class="experience-level">0-2 anos de experiência</span>
                         </div>
                     </div>
-                    <div class="path-item">
-                        <div class="path-icon">
-                            <i class="fas fa-gavel"></i>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-balance-scale" aria-hidden="true"></i>
                         </div>
-                        <div class="path-content">
+                        <div class="timeline-content" tabindex="0" role="article" aria-label="Advogado Júnior">
                             <h3>Advogado Júnior</h3>
-                            <p>Primeiros casos e experiência prática</p>
+                            <p>Profissional recém-formado com OAB ativa, responsável por casos de menor complexidade, atendimento a clientes e desenvolvimento de estratégias jurídicas básicas sob supervisão.</p>
+                            <span class="salary-range">R$ 3.500 - R$ 6.000</span>
+                            <span class="experience-level">2-4 anos de experiência</span>
                         </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-gavel" aria-hidden="true"></i>
+                        </div>
+                        <div class="timeline-content" tabindex="0" role="article" aria-label="Advogado Pleno">
+                            <h3>Advogado Pleno</h3>
+                            <p>Profissional experiente capaz de conduzir casos complexos de forma autônoma, liderar equipes menores e desenvolver especializações em áreas específicas do direito.</p>
+                            <span class="salary-range">R$ 8.000 - R$ 15.000</span>
+                            <span class="experience-level">4-8 anos de experiência</span>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-crown" aria-hidden="true"></i>
+                        </div>
+                        <div class="timeline-content" tabindex="0" role="article" aria-label="Sócio">
+                            <h3>Sócio</h3>
+                            <p>Líder estratégico do escritório, responsável pela gestão de grandes clientes, desenvolvimento de negócios e tomada de decisões importantes. Possui participação nos lucros da sociedade.</p>
+                            <span class="salary-range">R$ 20.000 - R$ 50.000+</span>
+                            <span class="experience-level">8-15 anos de experiência</span>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-user-tie" aria-hidden="true"></i>
+                        </div>
+                        <div class="timeline-content" tabindex="0" role="article" aria-label="Consultor Jurídico">
+                            <h3>Consultor Jurídico</h3>
+                            <p>Especialista sênior que oferece consultoria estratégica para empresas e organizações, focando em compliance, gestão de riscos e assessoria jurídica de alto nível.</p>
+                            <span class="salary-range">R$ 25.000 - R$ 80.000+</span>
+                            <span class="experience-level">15+ anos de experiência</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Salary Chart Section -->
+            <section class="content-section">
+                <div class="salary-chart">
+                    <h2>Evolução Salarial por Nível</h2>
+                    <div class="chart-bar">
+                        <div class="bar-info">
+                            <span class="bar-label">Estagiário</span>
+                            <span class="bar-value">R$ 1.600</span>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill estagiario" data-width="25"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-bar">
+                        <div class="bar-info">
+                            <span class="bar-label">Advogado Júnior</span>
+                            <span class="bar-value">R$ 4.750</span>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill junior" data-width="45"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-bar">
+                        <div class="bar-info">
+                            <span class="bar-label">Advogado Pleno</span>
+                            <span class="bar-value">R$ 11.500</span>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill pleno" data-width="70"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-bar">
+                        <div class="bar-info">
+                            <span class="bar-label">Sócio</span>
+                            <span class="bar-value">R$ 35.000</span>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill socio" data-width="90"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-bar">
+                        <div class="bar-info">
+                            <span class="bar-label">Consultor Jurídico</span>
+                            <span class="bar-value">R$ 52.500</span>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill consultor" data-width="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
                     </div>
                     <div class="path-item">
                         <div class="path-icon">
@@ -159,18 +824,95 @@
 
             <!-- AI Impact Section -->
             <section class="content-section">
-                <h2>Impacto da IA no Direito</h2>
+                <h2>Como a IA está Transformando o Direito</h2>
                 <div class="ai-content">
                     <div class="ai-text">
-                        <p>A Inteligência Artificial está transformando a prática jurídica, automatizando pesquisas, análise de contratos e due diligence. Ferramentas de IA auxiliam na predição de resultados judiciais e na elaboração de documentos legais.</p>
-                        <ul style="text-align: center; list-style: none; padding: 0;">
-                            <li>Automação de pesquisas jurídicas</li>
-                            <li>Análise inteligente de contratos</li>
-                            <li>Predição de resultados judiciais</li>
-                            <li>Elaboração assistida de documentos</li>
-                        </ul>
+                        <p>A Inteligência Artificial está revolucionando a prática jurídica através de ferramentas avançadas que aumentam a eficiência, precisão e acessibilidade dos serviços legais. Advogados que dominam essas tecnologias têm vantagem competitiva significativa no mercado.</p>
                     </div>
-           
+                </div>
+
+                <!-- AI Tools Grid -->
+                <div class="ai-tools-grid">
+                    <div class="ai-tool-card" tabindex="0" role="button" aria-label="Pesquisa Jurídica Inteligente">
+                        <h4><i class="fas fa-search ai-tool-icon" aria-hidden="true"></i>Pesquisa Jurídica Inteligente</h4>
+                        <p>Algoritmos de IA analisam milhões de decisões judiciais, doutrinas e jurisprudências em segundos, identificando precedentes relevantes e tendências de julgamento para fortalecer argumentações.</p>
+                        <div class="impact-stat">
+                            <span class="stat-number">85%</span>
+                            <span class="stat-label">Redução no tempo de pesquisa</span>
+                        </div>
+                    </div>
+                    
+                    <div class="ai-tool-card" tabindex="0" role="button" aria-label="Análise de Contratos">
+                        <h4><i class="fas fa-file-contract ai-tool-icon" aria-hidden="true"></i>Análise de Contratos</h4>
+                        <p>Sistemas de IA revisam contratos complexos, identificam cláusulas problemáticas, sugerem melhorias e detectam inconsistências que poderiam passar despercebidas na análise manual.</p>
+                        <div class="impact-stat">
+                            <span class="stat-number">70%</span>
+                            <span class="stat-label">Maior precisão na revisão</span>
+                        </div>
+                    </div>
+                    
+                    <div class="ai-tool-card" tabindex="0" role="button" aria-label="Detecção de Fraudes">
+                        <h4><i class="fas fa-shield-alt ai-tool-icon" aria-hidden="true"></i>Detecção de Fraudes</h4>
+                        <p>Ferramentas de machine learning analisam padrões suspeitos em transações financeiras, documentos e comportamentos, auxiliando na identificação precoce de atividades fraudulentas.</p>
+                        <div class="impact-stat">
+                            <span class="stat-number">92%</span>
+                            <span class="stat-label">Taxa de detecção de fraudes</span>
+                        </div>
+                    </div>
+                    
+                    <div class="ai-tool-card" tabindex="0" role="button" aria-label="Predição de Resultados">
+                        <h4><i class="fas fa-chart-line ai-tool-icon" aria-hidden="true"></i>Predição de Resultados</h4>
+                        <p>Modelos preditivos analisam histórico de casos similares, perfil de juízes e características processuais para estimar probabilidades de sucesso e orientar estratégias jurídicas.</p>
+                        <div class="impact-stat">
+                            <span class="stat-number">78%</span>
+                            <span class="stat-label">Precisão nas predições</span>
+                        </div>
+                    </div>
+                    
+                    <div class="ai-tool-card" tabindex="0" role="button" aria-label="Compliance Automatizado">
+                        <h4><i class="fas fa-clipboard-check ai-tool-icon" aria-hidden="true"></i>Compliance Automatizado</h4>
+                        <p>Sistemas inteligentes monitoram mudanças legislativas, alertam sobre novas regulamentações e verificam automaticamente a conformidade de processos empresariais com a lei.</p>
+                        <div class="impact-stat">
+                            <span class="stat-number">95%</span>
+                            <span class="stat-label">Redução de riscos de compliance</span>
+                        </div>
+                    </div>
+                    
+                    <div class="ai-tool-card" tabindex="0" role="button" aria-label="Chatbots Jurídicos">
+                        <h4><i class="fas fa-robot ai-tool-icon" aria-hidden="true"></i>Chatbots Jurídicos</h4>
+                        <p>Assistentes virtuais especializados oferecem orientação jurídica básica 24/7, triagem de casos, agendamento de consultas e respostas a dúvidas frequentes dos clientes.</p>
+                        <div class="impact-stat">
+                            <span class="stat-number">60%</span>
+                            <span class="stat-label">Redução no tempo de atendimento</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefits Section -->
+                <div class="ai-benefits" style="margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, #f8f9ff 0%, #e8ecff 100%); border-radius: 15px; border: 2px solid rgba(192, 57, 43, 0.2);">
+                    <h3 style="color: #c0392b; text-align: center; margin-bottom: 2rem; font-size: 1.5rem;">Benefícios da IA para Advogados</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                        <div style="text-align: center;">
+                            <i class="fas fa-clock" style="font-size: 2rem; color: #c0392b; margin-bottom: 1rem;"></i>
+                            <h4 style="color: #333; margin-bottom: 0.5rem;">Eficiência Temporal</h4>
+                            <p style="color: #666; font-size: 0.9rem;">Automatização de tarefas repetitivas permite foco em atividades estratégicas de maior valor</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <i class="fas fa-bullseye" style="font-size: 2rem; color: #8e44ad; margin-bottom: 1rem;"></i>
+                            <h4 style="color: #333; margin-bottom: 0.5rem;">Precisão Aprimorada</h4>
+                            <p style="color: #666; font-size: 0.9rem;">Redução significativa de erros humanos em análises complexas e revisões documentais</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <i class="fas fa-users" style="font-size: 2rem; color: #3498db; margin-bottom: 1rem;"></i>
+                            <h4 style="color: #333; margin-bottom: 0.5rem;">Acessibilidade Jurídica</h4>
+                            <p style="color: #666; font-size: 0.9rem;">Democratização do acesso à justiça através de serviços jurídicos mais acessíveis</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <i class="fas fa-chart-bar" style="font-size: 2rem; color: #e74c3c; margin-bottom: 1rem;"></i>
+                            <h4 style="color: #333; margin-bottom: 0.5rem;">Insights Estratégicos</h4>
+                            <p style="color: #666; font-size: 0.9rem;">Análise de dados para tomada de decisões mais informadas e estratégias vencedoras</p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -183,5 +925,262 @@
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="Assets/Js/logic.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Intersection Observer options
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            // Animate salary chart bars
+            const barObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const bars = entry.target.querySelectorAll('.bar-fill');
+                        bars.forEach((bar, index) => {
+                            setTimeout(() => {
+                                bar.style.width = bar.classList.contains('estagiario') ? '25%' :
+                                                bar.classList.contains('junior') ? '45%' :
+                                                bar.classList.contains('pleno') ? '70%' :
+                                                bar.classList.contains('socio') ? '90%' :
+                                                bar.classList.contains('consultor') ? '100%' : '0%';
+                            }, index * 200);
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            const salaryChart = document.querySelector('.salary-chart');
+            if (salaryChart) {
+                barObserver.observe(salaryChart);
+            }
+
+            // Animate skill and AI cards on hover
+            const cards = document.querySelectorAll('.skill-card, .ai-tool-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            // Animação dos números das estatísticas do hero
+            const heroStats = document.querySelectorAll('.career-stats .stat-number');
+            const heroStatsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = entry.target;
+                        const text = target.textContent;
+                        if (text.includes('%')) {
+                            animateHeroNumber(target, 0, parseInt(text), '%');
+                        } else if (text.includes('R$')) {
+                            const value = text.replace('R$ ', '').replace('.', '');
+                            animateHeroNumber(target, 0, parseInt(value), 'R$ ', true);
+                        }
+                        heroStatsObserver.unobserve(target);
+                    }
+                });
+            });
+
+            heroStats.forEach(stat => {
+                heroStatsObserver.observe(stat);
+            });
+
+            function animateHeroNumber(element, start, end, suffix, isCurrency = false) {
+                const duration = 2000;
+                const startTime = performance.now();
+                
+                function update(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const current = Math.floor(start + (end - start) * progress);
+                    
+                    if (isCurrency) {
+                        element.textContent = suffix + current.toLocaleString('pt-BR');
+                    } else {
+                        element.textContent = current + suffix;
+                    }
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    }
+                }
+                
+                requestAnimationFrame(update);
+            }
+
+            // Animate AI impact statistics numbers
+            const aiStatsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = entry.target;
+                        const text = target.textContent;
+                        if (text.includes('%')) {
+                            const value = parseInt(text);
+                            animateNumber(target, 0, value, '%');
+                        }
+                        aiStatsObserver.unobserve(target);
+                    }
+                });
+            }, observerOptions);
+
+            const aiStatNumbers = document.querySelectorAll('.ai-tool-card .stat-number');
+            aiStatNumbers.forEach(stat => {
+                aiStatsObserver.observe(stat);
+            });
+
+            function animateNumber(element, start, end, suffix) {
+                const duration = 1500;
+                const startTime = performance.now();
+                
+                function update(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const current = Math.floor(start + (end - start) * progress);
+                    
+                    element.textContent = current + suffix;
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    }
+                }
+                
+                requestAnimationFrame(update);
+            }
+
+            // Keyboard navigation for cards
+            cards.forEach(card => {
+                card.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.click();
+                    }
+                });
+            });
+
+            // Timeline items animation
+            const timelineObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            timelineItems.forEach((item, index) => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(50px)';
+                item.style.transition = `opacity 0.6s ease ${index * 0.2}s, transform 0.6s ease ${index * 0.2}s`;
+                timelineObserver.observe(item);
+            });
+
+            // Smooth scrolling for internal links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Add loading states for better UX
+            const addLoadingStates = () => {
+                const interactiveElements = document.querySelectorAll('.skill-card, .ai-tool-card, .timeline-content');
+                interactiveElements.forEach(element => {
+                    element.style.transition = 'all 0.3s ease';
+                });
+            };
+
+            addLoadingStates();
+
+            // Accessibility improvements
+            const improveAccessibility = () => {
+                // Add ARIA labels to interactive elements
+                cards.forEach((card, index) => {
+                    if (!card.getAttribute('aria-label')) {
+                        const title = card.querySelector('h3, h4');
+                        if (title) {
+                            card.setAttribute('aria-label', `Card: ${title.textContent}`);
+                        }
+                    }
+                });
+
+                // Add role attributes where needed
+                const skillsGrid = document.querySelector('.skills-grid');
+                if (skillsGrid) {
+                    skillsGrid.setAttribute('role', 'grid');
+                }
+
+                const aiToolsGrids = document.querySelectorAll('.ai-tools-grid');
+                aiToolsGrids.forEach(grid => {
+                    grid.setAttribute('role', 'grid');
+                });
+            };
+
+            improveAccessibility();
+
+            // Performance optimization: Lazy load animations
+            const lazyAnimations = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            // Apply lazy loading to all animated elements
+            const animatedElements = document.querySelectorAll('.skill-card, .ai-tool-card, .timeline-content, .impact-stat');
+            animatedElements.forEach(element => {
+                lazyAnimations.observe(element);
+            });
+        });
+
+        // Error handling for better user experience
+        window.addEventListener('error', function(e) {
+            console.warn('Non-critical error occurred:', e.message);
+        });
+
+        // Responsive behavior adjustments
+        const handleResize = () => {
+            const isMobile = window.innerWidth <= 768;
+            const cards = document.querySelectorAll('.skill-card, .ai-tool-card');
+            
+            cards.forEach(card => {
+                if (isMobile) {
+                    card.style.transform = 'none';
+                } else {
+                    // Reset transform for desktop
+                    card.style.transform = '';
+                }
+            });
+        };
+
+        window.addEventListener('resize', handleResize);
+        handleResize(); // Initial call
+    </script>
+
+    <!-- Career CTA Section -->
+    <section class="career-cta">
+        <h2>Pronto para Começar sua Jornada?</h2>
+        <p>Junte-se ao Programa Jovem Programador do SENAC e transforme seu futuro com tecnologia e IA!</p>
+        <div class="cta-buttons">
+            <a href="index.html#about" class="btn btn-primary">Saiba Mais</a>
+            <a href="index.html" class="btn btn-secondary">Voltar ao Início</a>
+        </div>
+    </section>
+
+    </main>
 </body>
 </html>

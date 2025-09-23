@@ -196,13 +196,33 @@
 
         .bar-fill {
             height: 100%;
-            background: linear-gradient(90deg, #ffd700, #ff6b6b);
             border-radius: 15px;
             transition: width 2s ease;
             display: flex;
             align-items: center;
             justify-content: flex-end;
             padding-right: 10px;
+            width: 0;
+        }
+
+        .bar-fill.enfermagem {
+            background: linear-gradient(90deg, #ff6b6b, #ee5a24);
+        }
+
+        .bar-fill.medicina {
+            background: linear-gradient(90deg, #4ecdc4, #44a08d);
+        }
+
+        .bar-fill.telemedicina {
+            background: linear-gradient(90deg, #45b7d1, #96c93d);
+        }
+
+        .bar-fill.gestao {
+            background: linear-gradient(90deg, #f093fb, #f5576c);
+        }
+
+        .bar-fill.pesquisa {
+            background: linear-gradient(90deg, #ffd700, #ff8c00);
         }
 
         .bar-value {
@@ -607,7 +627,7 @@
                         <div class="chart-bar">
                             <div class="bar-label">Enfermagem Digital</div>
                             <div class="bar-container">
-                                <div class="bar-fill" style="width: 60%;">
+                                <div class="bar-fill enfermagem" data-width="60">
                                     <span class="bar-value">R$ 4.500 - R$ 8.000</span>
                                 </div>
                             </div>
@@ -615,7 +635,7 @@
                         <div class="chart-bar">
                             <div class="bar-label">Medicina Clínica</div>
                             <div class="bar-container">
-                                <div class="bar-fill" style="width: 85%;">
+                                <div class="bar-fill medicina" data-width="85">
                                     <span class="bar-value">R$ 8.000 - R$ 15.000</span>
                                 </div>
                             </div>
@@ -623,7 +643,7 @@
                         <div class="chart-bar">
                             <div class="bar-label">Telemedicina</div>
                             <div class="bar-container">
-                                <div class="bar-fill" style="width: 70%;">
+                                <div class="bar-fill telemedicina" data-width="70">
                                     <span class="bar-value">R$ 6.000 - R$ 12.000</span>
                                 </div>
                             </div>
@@ -631,7 +651,7 @@
                         <div class="chart-bar">
                             <div class="bar-label">Gestão Hospitalar</div>
                             <div class="bar-container">
-                                <div class="bar-fill" style="width: 90%;">
+                                <div class="bar-fill gestao" data-width="90">
                                     <span class="bar-value">R$ 10.000 - R$ 18.000</span>
                                 </div>
                             </div>
@@ -639,7 +659,7 @@
                         <div class="chart-bar">
                             <div class="bar-label">Pesquisa & IA</div>
                             <div class="bar-container">
-                                <div class="bar-fill" style="width: 100%;">
+                                <div class="bar-fill pesquisa" data-width="100">
                                     <span class="bar-value">R$ 12.000 - R$ 25.000</span>
                                 </div>
                             </div>
@@ -772,6 +792,188 @@
     </main>
 
     <script src="Assets/Javascript/logic.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Intersection Observer options
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            // Animate salary chart bars
+            const salaryChart = document.querySelector('.salary-chart');
+            if (salaryChart) {
+                const barObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const bars = entry.target.querySelectorAll('.bar-fill');
+                            bars.forEach((bar, index) => {
+                                setTimeout(() => {
+                                    const width = bar.getAttribute('data-width');
+                                    bar.style.width = width + '%';
+                                }, index * 200);
+                            });
+                            barObserver.unobserve(entry.target);
+                        }
+                    });
+                }, observerOptions);
+                
+                barObserver.observe(salaryChart);
+            }
+
+            // Animate health area cards on hover
+            const cards = document.querySelectorAll('.health-area-card, .ai-tool-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            // Animação dos números das estatísticas do hero
+            const heroStats = document.querySelectorAll('.career-stats .stat-number');
+            const heroStatsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = entry.target;
+                        const text = target.textContent;
+                        if (text.includes('%')) {
+                            animateHeroNumber(target, 0, parseInt(text), '%');
+                        } else if (text.includes('R$')) {
+                            const value = text.replace('R$ ', '').replace('.', '');
+                            animateHeroNumber(target, 0, parseInt(value), 'R$ ', true);
+                        }
+                        heroStatsObserver.unobserve(target);
+                    }
+                });
+            });
+
+            heroStats.forEach(stat => {
+                heroStatsObserver.observe(stat);
+            });
+
+            function animateHeroNumber(element, start, end, suffix, isCurrency = false) {
+                const duration = 2000;
+                const startTime = performance.now();
+                
+                function update(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const current = Math.floor(start + (end - start) * progress);
+                    
+                    if (isCurrency) {
+                        element.textContent = suffix + current.toLocaleString('pt-BR');
+                    } else {
+                        element.textContent = current + suffix;
+                    }
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    }
+                }
+                
+                requestAnimationFrame(update);
+            }
+
+            // Timeline animations
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            const timelineObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            timelineItems.forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(30px)';
+                item.style.transition = 'all 0.6s ease';
+                timelineObserver.observe(item);
+            });
+
+            // Keyboard navigation for cards
+            cards.forEach(card => {
+                card.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.click();
+                    }
+                });
+            });
+
+            // Smooth scrolling for internal links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Loading state management
+            window.addEventListener('load', function() {
+                document.body.classList.add('loaded');
+            });
+
+            // Accessibility improvements
+            const interactiveElements = document.querySelectorAll('.health-area-card, .ai-tool-card');
+            interactiveElements.forEach(element => {
+                if (!element.hasAttribute('role')) {
+                    element.setAttribute('role', 'button');
+                }
+                if (!element.hasAttribute('tabindex')) {
+                    element.setAttribute('tabindex', '0');
+                }
+            });
+
+            // Performance optimization - Lazy load animations
+            const animatedElements = document.querySelectorAll('.stat-number, .bar-fill');
+            const lazyAnimationObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-ready');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            animatedElements.forEach(element => {
+                lazyAnimationObserver.observe(element);
+            });
+
+            // Responsive behavior adjustments
+            function handleResize() {
+                const isMobile = window.innerWidth <= 768;
+                const cards = document.querySelectorAll('.health-area-card, .ai-tool-card');
+                
+                cards.forEach(card => {
+                    if (isMobile) {
+                        card.style.transform = 'none';
+                    }
+                });
+            }
+
+            window.addEventListener('resize', handleResize);
+            handleResize(); // Initial call
+
+            // Error handling for animations
+            try {
+                console.log('Health Specialist page animations initialized successfully');
+            } catch (error) {
+                console.warn('Some animations may not work properly:', error);
+            }
+        });
+    </script>
 </body>
 
 </html>

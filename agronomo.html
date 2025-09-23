@@ -4,7 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agrônomo - ImpactTech</title>
+    <title>Agrônomo com IA - Carreira em Agricultura Digital | ImpactTech</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Descubra como se tornar um Agrônomo especializado em agricultura digital e IA. Aprenda sobre agricultura de precisão, drones, sensoriamento remoto e construa uma carreira sólida no agronegócio.">
+    <meta name="keywords" content="agrônomo, agricultura digital, agricultura de precisão, drones agrícolas, IA agricultura, sensoriamento remoto, carreira agronegócio, salário agrônomo, irrigação inteligente, previsão safra">
+    <meta name="author" content="ImpactTech">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Agrônomo com IA - Carreira em Agricultura Digital">
+    <meta property="og:description" content="Transforme sua carreira na agricultura com tecnologia e IA. Aprenda sobre agricultura de precisão, drones e sensoriamento remoto para revolucionar o agronegócio.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://impacttech.com.br/agronomo">
+    <meta property="og:image" content="https://impacttech.com.br/assets/imgs/agronomo-og.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Agrônomo com IA - Carreira em Agricultura Digital">
+    <meta name="twitter:description" content="Descubra como a IA está revolucionando a agricultura e como você pode se destacar nessa área em crescimento.">
+    <meta name="twitter:image" content="https://impacttech.com.br/assets/imgs/agronomo-twitter.jpg">
+    
     <link rel="icon" type="image/svg+xml" href="Assets/imgs/favicon.svg">
     <link rel="shortcut icon" href="Assets/imgs/favicon.svg">
     <link rel="apple-touch-icon" href="Assets/imgs/favicon.svg">
@@ -16,6 +35,514 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="Assets/Css/career-page.css">
+    
+    <style>
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skill-card {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .skill-card h3 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-icon {
+            font-size: 1.5rem;
+            color: #f1c40f;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+        
+        /* Enhanced Timeline */
+        .career-timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 3rem 0;
+        }
+        
+        .career-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background: linear-gradient(to bottom, #27ae60, #2ecc71, #f39c12, #e74c3c);
+            transform: translateX(-50%);
+            border-radius: 3px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin: 4rem 0;
+            width: 50%;
+            padding: 0 3rem;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            text-align: left;
+        }
+        
+        .timeline-content {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8ecff 100%);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            position: relative;
+            border: 2px solid rgba(39, 174, 96, 0.2);
+            transition: all 0.4s ease;
+        }
+        
+        .timeline-content:hover {
+            transform: scale(1.05);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+        }
+        
+        .timeline-icon {
+            position: absolute;
+            top: 50%;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            transform: translateY(-50%);
+            border: 6px solid white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+        
+        .timeline-item:nth-child(2) .timeline-icon {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+        }
+        
+        .timeline-item:nth-child(3) .timeline-icon {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+        }
+        
+        .timeline-item:nth-child(4) .timeline-icon {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-icon {
+            right: -42px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-icon {
+            left: -42px;
+        }
+        
+        .timeline-content h3 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .timeline-content p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .salary-range {
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin: 1rem 0;
+            display: block;
+        }
+        
+        .experience-level {
+            color: #666;
+            font-style: italic;
+            font-size: 1rem;
+        }
+        
+        /* Salary Chart */
+        .salary-chart {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-top: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .salary-chart h2 {
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .chart-bar {
+            margin-bottom: 1.5rem;
+        }
+
+        .bar-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .bar-label {
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .bar-value {
+            color: #f1c40f;
+            font-weight: 700;
+            font-size: 1rem;
+            background: rgba(241, 196, 15, 0.2);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            border: 1px solid rgba(241, 196, 15, 0.3);
+        }
+
+        .bar-container {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            height: 50px;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 2s ease-in-out;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 1rem;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .bar-fill.estagiario {
+            background: linear-gradient(90deg, #27ae60, #2ecc71);
+            width: 30%;
+        }
+        
+        .bar-fill.tecnico {
+            background: linear-gradient(90deg, #2ecc71, #27ae60);
+            width: 55%;
+        }
+        
+        .bar-fill.engenheiro {
+            background: linear-gradient(90deg, #f39c12, #e67e22);
+            width: 80%;
+        }
+        
+        .bar-fill.gestor {
+            background: linear-gradient(90deg, #e74c3c, #c0392b);
+            width: 100%;
+        }
+        
+        /* AI Tools Section */
+        .ai-categories {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+        
+        .ai-category {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8ecff 100%);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border: 2px solid rgba(39, 174, 96, 0.2);
+        }
+        
+        .ai-category-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .ai-category-header i {
+            font-size: 2rem;
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+            padding: 1rem;
+            border-radius: 15px;
+        }
+        
+        .ai-category-header h3 {
+            color: #333;
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        
+        .ai-tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .ai-tool-card {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 15px;
+            padding: 1.5rem;
+            color: white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .ai-tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .ai-tool-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .ai-tool-icon {
+            font-size: 1.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem;
+            border-radius: 10px;
+        }
+        
+        .ai-tool-card p {
+            line-height: 1.6;
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+        
+        /* Impact Stats */
+        .ai-impact-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8ecff 100%);
+            border-radius: 20px;
+            border: 2px solid rgba(39, 174, 96, 0.2);
+        }
+        
+        .impact-stat {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-number {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #27ae60;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .ai-tools-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .skill-card, .ai-tool-card {
+                padding: 1.5rem;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                text-align: left;
+                padding: 0 1rem 0 4rem;
+            }
+            
+            .career-timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-icon {
+                left: -20px !important;
+                right: auto !important;
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+            
+            .bar-info {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0.5rem;
+            }
+            
+            .bar-label {
+                text-align: center;
+            }
+
+            .salary-chart, .career-timeline {
+                padding: 1.5rem;
+            }
+
+            .bar-container {
+                height: 40px;
+            }
+
+            .bar-fill {
+                font-size: 0.8rem;
+            }
+
+            .ai-impact-stats {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .skill-card, .ai-tool-card, .salary-chart, .career-timeline {
+                padding: 1rem;
+            }
+
+            .timeline-content {
+                padding: 1rem;
+            }
+
+            .skill-card h3, .timeline-content h3 {
+                font-size: 1.1rem;
+            }
+
+            .ai-tool-card h4 {
+                font-size: 1rem;
+            }
+
+            .ai-category-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+        }
+
+        /* Animation for bars */
+        @keyframes fillBar {
+            from { width: 0%; }
+            to { width: var(--target-width); }
+        }
+
+        .bar-fill.animate {
+            animation: fillBar 2s ease-in-out;
+        }
+
+        /* Accessibility improvements */
+        .skill-card:focus,
+        .ai-tool-card:focus,
+        .timeline-content:focus {
+            outline: 2px solid #f1c40f;
+            outline-offset: 2px;
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .skill-card, .ai-tool-card, .salary-chart, .career-timeline {
+                border: 2px solid #ffffff;
+            }
+
+            .skill-tag, .salary-range, .experience-level {
+                border: 1px solid #ffffff;
+            }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            .skill-card, .ai-tool-card, .timeline-content {
+                transition: none;
+            }
+
+            .bar-fill {
+                transition: none;
+            }
+
+            .skill-tag:hover {
+                transform: none;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -73,46 +600,61 @@
 
             <!-- Skills Section -->
             <section class="content-section">
-                <h2>Habilidades Essenciais</h2>
+                <h2>Áreas de Atuação</h2>
                 <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Conhecimento Agronômico</h3>
+                    <div class="skill-card" tabindex="0">
+                        <h3><i class="fas fa-seedling skill-icon"></i> Produção Agrícola</h3>
                         <div class="skill-tags">
-                            <span class="skill-tag">Fitotecnia</span>
-                            <span class="skill-tag">Solos</span>
-                            <span class="skill-tag">Entomologia</span>
-                            <span class="skill-tag">Fitopatologia</span>
+                            <span class="skill-tag">Cultivo de Grãos</span>
+                            <span class="skill-tag">Horticultura</span>
+                            <span class="skill-tag">Fruticultura</span>
+                            <span class="skill-tag">Silvicultura</span>
+                            <span class="skill-tag">Manejo de Solo</span>
+                            <span class="skill-tag">Nutrição Vegetal</span>
+                            <span class="skill-tag">Controle Fitossanitário</span>
+                            <span class="skill-tag">Melhoramento Genético</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" tabindex="0">
+                        <h3><i class="fas fa-leaf skill-icon"></i> Sustentabilidade</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Agricultura Orgânica</span>
+                            <span class="skill-tag">Agroecologia</span>
+                            <span class="skill-tag">Conservação do Solo</span>
+                            <span class="skill-tag">Manejo Integrado</span>
+                            <span class="skill-tag">Agricultura de Precisão</span>
+                            <span class="skill-tag">Rotação de Culturas</span>
+                            <span class="skill-tag">Bioenergia</span>
+                            <span class="skill-tag">Certificação Ambiental</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" tabindex="0">
+                        <h3><i class="fas fa-microscope skill-icon"></i> Pesquisa & Desenvolvimento</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Biotecnologia</span>
                             <span class="skill-tag">Genética Vegetal</span>
+                            <span class="skill-tag">Fitopatologia</span>
+                            <span class="skill-tag">Entomologia</span>
+                            <span class="skill-tag">Ciência do Solo</span>
                             <span class="skill-tag">Climatologia</span>
+                            <span class="skill-tag">Experimentação</span>
+                            <span class="skill-tag">Inovação Agrícola</span>
                         </div>
                     </div>
-                    <div class="skill-category">
-                        <h3>Agricultura de Precisão</h3>
+
+                    <div class="skill-card" tabindex="0">
+                        <h3><i class="fas fa-tractor skill-icon"></i> Gestão de Fazendas</h3>
                         <div class="skill-tags">
-                            <span class="skill-tag">GPS/GNSS</span>
-                            <span class="skill-tag">Drones</span>
-                            <span class="skill-tag">Sensores IoT</span>
-                            <span class="skill-tag">Imagens de Satélite</span>
-                            <span class="skill-tag">Mapeamento</span>
-                            <span class="skill-tag">Automação</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Análise de Dados</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">GIS</span>
-                            <span class="skill-tag">Python/R</span>
-                            <span class="skill-tag">Estatística</span>
-                            <span class="skill-tag">Big Data</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>IA na Agricultura</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Machine Learning</span>
-                            <span class="skill-tag">Visão Computacional</span>
-                            <span class="skill-tag">Modelos Preditivos</span>
-                            <span class="skill-tag">Agricultura Inteligente</span>
+                            <span class="skill-tag">Administração Rural</span>
+                            <span class="skill-tag">Planejamento Agrícola</span>
+                            <span class="skill-tag">Gestão Financeira</span>
+                            <span class="skill-tag">Logística Rural</span>
+                            <span class="skill-tag">Recursos Humanos</span>
+                            <span class="skill-tag">Tecnologia Agrícola</span>
+                            <span class="skill-tag">Análise de Mercado</span>
+                            <span class="skill-tag">Consultoria Técnica</span>
                         </div>
                     </div>
                 </div>
@@ -121,45 +663,101 @@
             <!-- Career Path Section -->
             <section class="content-section">
                 <h2>Trajetória de Carreira</h2>
-                <div class="path-timeline">
-                    <div class="path-item">
-                        <div class="path-icon">
+                <div class="career-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Estagiário Agrônomo</h3>
+                            <p>Início da carreira com foco em aprendizado prático e desenvolvimento de habilidades básicas em campo. Acompanhamento de profissionais experientes e participação em projetos de pesquisa.</p>
+                            <span class="salary-range">R$ 800 - R$ 1.500/mês</span>
+                            <span class="experience-level">0-1 anos de experiência</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Técnico Agrícola</h3>
+                            <p>Execução de atividades técnicas especializadas, análises de campo, coleta de dados e apoio em projetos agronômicos. Desenvolvimento de expertise em áreas específicas da agricultura.</p>
+                            <span class="salary-range">R$ 2.500 - R$ 4.500/mês</span>
+                            <span class="experience-level">1-3 anos de experiência</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
                             <i class="fas fa-seedling"></i>
                         </div>
-                        <div class="path-content">
-                            <h3>Agrônomo Júnior</h3>
-                            <p>R$ 3.500 - R$ 6.000</p>
-                            <span>0-2 anos de experiência</span>
+                        <div class="timeline-content">
+                            <h3>Engenheiro Agrônomo</h3>
+                            <p>Responsabilidade técnica completa por projetos agrícolas, consultoria especializada, desenvolvimento de soluções inovadoras e liderança de equipes técnicas em fazendas e empresas do agronegócio.</p>
+                            <span class="salary-range">R$ 5.000 - R$ 12.000/mês</span>
+                            <span class="experience-level">3-8 anos de experiência</span>
                         </div>
                     </div>
-                    <div class="path-item">
-                        <div class="path-icon">
-                            <i class="fas fa-tree"></i>
-                        </div>
-                        <div class="path-content">
-                            <h3>Agrônomo Pleno</h3>
-                            <p>R$ 6.000 - R$ 10.000</p>
-                            <span>2-5 anos de experiência</span>
-                        </div>
-                    </div>
-                    <div class="path-item">
-                        <div class="path-icon">
+
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
                             <i class="fas fa-crown"></i>
                         </div>
-                        <div class="path-content">
-                            <h3>Agrônomo Sênior</h3>
-                            <p>R$ 10.000 - R$ 16.000</p>
-                            <span>5-8 anos de experiência</span>
+                        <div class="timeline-content">
+                            <h3>Gestor/Diretor Técnico</h3>
+                            <p>Liderança estratégica em grandes propriedades rurais ou empresas do agronegócio. Tomada de decisões de alto nível, gestão de múltiplas fazendas e desenvolvimento de políticas agrícolas corporativas.</p>
+                            <span class="salary-range">R$ 15.000 - R$ 35.000+/mês</span>
+                            <span class="experience-level">8+ anos de experiência</span>
                         </div>
                     </div>
-                    <div class="path-item">
-                        <div class="path-icon">
-                            <i class="fas fa-rocket"></i>
+                </div>
+            </section>
+
+            <!-- Salary Chart Section -->
+            <section class="salary-section">
+                <div class="container">
+                    <div class="salary-chart">
+                        <h2>Evolução Salarial por Experiência</h2>
+                        
+                        <div class="chart-bar">
+                            <div class="bar-info">
+                                <span class="bar-label">Estagiário Agrônomo</span>
+                                <span class="bar-value">R$ 800 - R$ 1.500</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill estagiario"></div>
+                            </div>
                         </div>
-                        <div class="path-content">
-                            <h3>Gerente Técnico</h3>
-                            <p>R$ 15.000 - R$ 25.000</p>
-                            <span>8+ anos de experiência</span>
+
+                        <div class="chart-bar">
+                            <div class="bar-info">
+                                <span class="bar-label">Técnico Agrícola</span>
+                                <span class="bar-value">R$ 2.500 - R$ 4.500</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill tecnico"></div>
+                            </div>
+                        </div>
+
+                        <div class="chart-bar">
+                            <div class="bar-info">
+                                <span class="bar-label">Engenheiro Agrônomo</span>
+                                <span class="bar-value">R$ 5.000 - R$ 12.000</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill engenheiro"></div>
+                            </div>
+                        </div>
+
+                        <div class="chart-bar">
+                            <div class="bar-info">
+                                <span class="bar-label">Gestor/Diretor Técnico</span>
+                                <span class="bar-value">R$ 15.000 - R$ 35.000+</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill gestor"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -190,6 +788,90 @@
                         </ul>
                     </div>
                 </div>
+
+                <div class="ai-categories">
+                    <div class="ai-category">
+                        <div class="ai-category-header">
+                            <i class="fas fa-satellite-dish"></i>
+                            <h3>Sensoriamento Remoto</h3>
+                        </div>
+                        <div class="ai-tools-grid">
+                            <div class="ai-tool-card" tabindex="0">
+                                <h4><i class="fas fa-satellite ai-tool-icon"></i> Imagens de Satélite</h4>
+                                <p>Monitoramento de culturas em tempo real, detecção de pragas e doenças, análise de vigor vegetativo e estimativa de produtividade através de índices espectrais.</p>
+                            </div>
+                            <div class="ai-tool-card" tabindex="0">
+                                <h4><i class="fas fa-helicopter ai-tool-icon"></i> Drones Agrícolas</h4>
+                                <p>Mapeamento de precisão, pulverização automatizada, monitoramento de irrigação e coleta de dados detalhados para análise de variabilidade espacial.</p>
+                            </div>
+                            <div class="ai-tool-card" tabindex="0">
+                                <h4><i class="fas fa-eye ai-tool-icon"></i> Visão Computacional</h4>
+                                <p>Identificação automática de pragas, classificação de qualidade de grãos, contagem de plantas e análise de estresse hídrico através de processamento de imagens.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ai-category">
+                        <div class="ai-category-header">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Previsão de Safra</h3>
+                        </div>
+                        <div class="ai-tools-grid">
+                            <div class="ai-tool-card" tabindex="0">
+                                <h4><i class="fas fa-cloud-sun ai-tool-icon"></i> Modelos Climáticos</h4>
+                                <p>Previsão de condições meteorológicas, análise de risco climático, otimização de calendário agrícola e planejamento de plantio baseado em dados históricos.</p>
+                            </div>
+                            <div class="ai-tool-card" tabindex="0">
+                                <h4><i class="fas fa-seedling ai-tool-icon"></i> Modelos de Crescimento</h4>
+                                <p>Simulação do desenvolvimento de culturas, estimativa de produtividade, otimização de nutrição vegetal e previsão de janelas de colheita ideais.</p>
+                            </div>
+                            <div class="ai-tool-card" tabindex="0">
+                                <h4><i class="fas fa-chart-area ai-tool-icon"></i> Análise Preditiva</h4>
+                                <p>Previsão de demanda de mercado, otimização de preços, análise de tendências de commodities e planejamento estratégico de produção.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ai-category">
+                        <div class="ai-category-header">
+                            <i class="fas fa-tint"></i>
+                            <h3>Irrigação Inteligente</h3>
+                        </div>
+                        <div class="ai-tools-grid">
+                            <div class="ai-tool-card" tabindex="0">
+                                <h4><i class="fas fa-thermometer-half ai-tool-icon"></i> Sensores IoT</h4>
+                                <p>Monitoramento contínuo de umidade do solo, temperatura, pH e nutrientes, com coleta automática de dados para tomada de decisão em tempo real.</p>
+                            </div>
+                            <div class="ai-tool-card" tabindex="0">
+                                <h4><i class="fas fa-water ai-tool-icon"></i> Sistemas Automatizados</h4>
+                                <p>Irrigação por gotejamento inteligente, controle automático de válvulas, otimização do uso da água e redução de desperdícios através de algoritmos adaptativos.</p>
+                            </div>
+                            <div class="ai-tool-card" tabindex="0">
+                                <h4><i class="fas fa-mobile-alt ai-tool-icon"></i> Gestão Remota</h4>
+                                <p>Controle via aplicativo móvel, alertas automáticos, relatórios de consumo hídrico e integração com sistemas de gestão agrícola para otimização total.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ai-impact-stats">
+                    <div class="impact-stat">
+                        <span class="stat-number" data-target="35">0</span>
+                        <span class="stat-label">% de aumento na produtividade com IA</span>
+                    </div>
+                    <div class="impact-stat">
+                        <span class="stat-number" data-target="40">0</span>
+                        <span class="stat-label">% de redução no uso de água</span>
+                    </div>
+                    <div class="impact-stat">
+                        <span class="stat-number" data-target="25">0</span>
+                        <span class="stat-label">% de economia em defensivos</span>
+                    </div>
+                    <div class="impact-stat">
+                        <span class="stat-number" data-target="60">0</span>
+                        <span class="stat-label">% de precisão na detecção de pragas</span>
+                    </div>
+                </div>
             </section>
 
             <!-- CTA Section -->
@@ -205,6 +887,236 @@
     </main>
 
     <script src="Assets/Javascript/logic.js"></script>
+    <script>
+        // Enhanced interactivity and animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate salary chart bars
+            const observerOptions = {
+                threshold: 0.5,
+                rootMargin: '0px 0px -100px 0px'
+            };
+
+            const barObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const bars = entry.target.querySelectorAll('.bar-fill');
+                        bars.forEach((bar, index) => {
+                            setTimeout(() => {
+                                bar.style.width = bar.classList.contains('estagiario') ? '30%' :
+                                                bar.classList.contains('tecnico') ? '55%' :
+                                                bar.classList.contains('engenheiro') ? '80%' :
+                                                bar.classList.contains('gestor') ? '100%' : '0%';
+                            }, index * 200);
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            const salaryChart = document.querySelector('.salary-chart');
+            if (salaryChart) {
+                barObserver.observe(salaryChart);
+            }
+
+            // Animate skill and AI cards on hover
+            const cards = document.querySelectorAll('.skill-card, .ai-tool-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            // Animação dos números das estatísticas do hero
+            const heroStats = document.querySelectorAll('.career-stats .stat-number');
+            const heroStatsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = entry.target;
+                        const text = target.textContent;
+                        if (text.includes('%')) {
+                            animateHeroNumber(target, 0, parseInt(text), '%');
+                        } else if (text.includes('R$')) {
+                            const value = text.replace('R$ ', '').replace('.', '');
+                            animateHeroNumber(target, 0, parseInt(value), 'R$ ', true);
+                        }
+                        heroStatsObserver.unobserve(target);
+                    }
+                });
+            });
+
+            heroStats.forEach(stat => {
+                heroStatsObserver.observe(stat);
+            });
+
+            function animateHeroNumber(element, start, end, suffix, isCurrency = false) {
+                const duration = 2000;
+                const startTime = performance.now();
+                
+                function update(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const current = Math.floor(start + (end - start) * progress);
+                    
+                    if (isCurrency) {
+                        element.textContent = suffix + current.toLocaleString('pt-BR');
+                    } else {
+                        element.textContent = current + suffix;
+                    }
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    }
+                }
+                
+                requestAnimationFrame(update);
+            }
+
+            // Animate statistics numbers
+            const animateNumbers = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = parseInt(entry.target.getAttribute('data-target'));
+                        const increment = target / 50;
+                        let current = 0;
+                        
+                        const timer = setInterval(() => {
+                            current += increment;
+                            if (current >= target) {
+                                current = target;
+                                clearInterval(timer);
+                            }
+                            entry.target.textContent = Math.floor(current);
+                        }, 40);
+                        
+                        observer.unobserve(entry.target);
+                    }
+                });
+            };
+
+            const numberObserver = new IntersectionObserver(animateNumbers, observerOptions);
+            const statNumbers = document.querySelectorAll('.impact-stat .stat-number');
+            statNumbers.forEach(number => numberObserver.observe(number));
+
+            // Keyboard navigation for cards
+            cards.forEach(card => {
+                card.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.click();
+                    }
+                });
+            });
+
+            // Timeline items animation
+            const timelineObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            timelineItems.forEach((item, index) => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(50px)';
+                item.style.transition = `opacity 0.6s ease ${index * 0.2}s, transform 0.6s ease ${index * 0.2}s`;
+                timelineObserver.observe(item);
+            });
+
+            // Smooth scrolling for internal links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Add loading states for better UX
+            const addLoadingStates = () => {
+                const interactiveElements = document.querySelectorAll('.skill-card, .ai-tool-card, .timeline-content');
+                interactiveElements.forEach(element => {
+                    element.style.transition = 'all 0.3s ease';
+                });
+            };
+
+            addLoadingStates();
+
+            // Accessibility improvements
+            const improveAccessibility = () => {
+                // Add ARIA labels to interactive elements
+                cards.forEach((card, index) => {
+                    if (!card.getAttribute('aria-label')) {
+                        const title = card.querySelector('h3, h4');
+                        if (title) {
+                            card.setAttribute('aria-label', `Card: ${title.textContent}`);
+                        }
+                    }
+                });
+
+                // Add role attributes where needed
+                const skillsGrid = document.querySelector('.skills-grid');
+                if (skillsGrid) {
+                    skillsGrid.setAttribute('role', 'grid');
+                }
+
+                const aiToolsGrids = document.querySelectorAll('.ai-tools-grid');
+                aiToolsGrids.forEach(grid => {
+                    grid.setAttribute('role', 'grid');
+                });
+            };
+
+            improveAccessibility();
+
+            // Performance optimization: Lazy load animations
+            const lazyAnimations = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            // Apply lazy loading to all animated elements
+            const animatedElements = document.querySelectorAll('.skill-card, .ai-tool-card, .timeline-content, .impact-stat');
+            animatedElements.forEach(element => {
+                lazyAnimations.observe(element);
+            });
+        });
+
+        // Error handling for better user experience
+        window.addEventListener('error', function(e) {
+            console.warn('Non-critical error occurred:', e.message);
+        });
+
+        // Responsive behavior adjustments
+        const handleResize = () => {
+            const isMobile = window.innerWidth <= 768;
+            const cards = document.querySelectorAll('.skill-card, .ai-tool-card');
+            
+            cards.forEach(card => {
+                if (isMobile) {
+                    card.style.transform = 'none';
+                } else {
+                    // Reset transform for desktop
+                    card.style.transform = '';
+                }
+            });
+        };
+
+        window.addEventListener('resize', handleResize);
+        handleResize(); // Initial call
+    </script>
 </body>
 
 </html>
