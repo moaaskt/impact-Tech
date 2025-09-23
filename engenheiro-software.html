@@ -4,10 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Engenheiro de Software - ImpactTech</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Engenheiro de Software - Carreira em Tecnologia | ImpactTech</title>
+    <meta name="description" content="Descubra a carreira de Engenheiro de Software: salários, habilidades essenciais, trajetória profissional e como a IA está transformando a profissão. Guia completo 2024.">
+    <meta name="keywords" content="engenheiro de software, programador, desenvolvedor, carreira tecnologia, salário programador, habilidades programação, IA desenvolvimento">
+    <meta name="author" content="ImpactTech">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Engenheiro de Software - Carreira em Tecnologia | ImpactTech">
+    <meta property="og:description" content="Descubra a carreira de Engenheiro de Software: salários, habilidades essenciais, trajetória profissional e como a IA está transformando a profissão.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://impacttech.com/engenheiro-software">
+    <meta property="og:image" content="Assets/imgs/engenheiro-software-og.jpg">
+    <meta property="og:site_name" content="ImpactTech">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Engenheiro de Software - Carreira em Tecnologia | ImpactTech">
+    <meta name="twitter:description" content="Descubra a carreira de Engenheiro de Software: salários, habilidades essenciais, trajetória profissional e como a IA está transformando a profissão.">
+    <meta name="twitter:image" content="Assets/imgs/engenheiro-software-og.jpg">
+    
     <link rel="icon" type="image/svg+xml" href="Assets/imgs/favicon.svg">
     <link rel="shortcut icon" href="Assets/imgs/favicon.svg">
     <link rel="apple-touch-icon" href="Assets/imgs/favicon.svg">
+    
     <!-- Google Fonts - Orbitron for titles and Montserrat for text -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,6 +37,377 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="Assets/Css/career-page.css">
+    
+    <style>
+        /* Enhanced Styles for Software Engineer Page */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .skill-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .skill-card h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .skill-icon {
+            font-size: 1.5rem;
+            color: #ffd700;
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .skill-tag {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Enhanced Timeline */
+        .career-timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 2rem 0;
+        }
+        
+        .career-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #667eea, #764ba2);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin: 3rem 0;
+            width: 50%;
+            padding: 0 2rem;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            text-align: left;
+        }
+        
+        .timeline-content {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8ecff 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            border: 2px solid rgba(102, 126, 234, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-content:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .timeline-icon {
+            position: absolute;
+            top: 50%;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            transform: translateY(-50%);
+            border: 4px solid white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-icon {
+            right: -32px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-icon {
+            left: -32px;
+        }
+        
+        .timeline-content h3 {
+            color: #333;
+            margin-bottom: 0.8rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+        
+        .timeline-content p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+        
+        .salary-range {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 0.8rem 0;
+            display: block;
+        }
+        
+        .experience-level {
+            color: #666;
+            font-style: italic;
+            font-size: 0.95rem;
+        }
+        
+        /* Salary Chart */
+        .salary-chart {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8ecff 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin: 2rem 0;
+            border: 2px solid rgba(102, 126, 234, 0.1);
+        }
+        
+        .salary-chart h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .chart-bar {
+            display: flex;
+            align-items: center;
+            margin: 1.5rem 0;
+            gap: 1rem;
+        }
+        
+        .bar-label {
+            min-width: 180px;
+            font-weight: 700;
+            color: #333;
+            font-size: 1rem;
+        }
+        
+        .bar-container {
+            flex: 1;
+            height: 35px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            border: 2px solid rgba(102, 126, 234, 0.2);
+        }
+        
+        .bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 18px;
+            transition: width 1s ease;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 15px;
+            color: white;
+            font-weight: bold;
+            font-size: 0.9rem;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Experience Level Selector */
+        .experience-selector {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .level-btn {
+            padding: 1rem 2rem;
+            border: 2px solid #667eea;
+            background: white;
+            color: #667eea;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        
+        .level-btn:hover,
+        .level-btn.active {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        .skills-highlight {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8ecff 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 2px solid rgba(102, 126, 234, 0.1);
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skills-highlight h3 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+        
+        .skills-highlight p {
+            color: #555;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .highlighted-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 1rem;
+            justify-content: center;
+        }
+        
+        .highlighted-skill {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            animation: pulse 2s infinite;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .highlighted-skill:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .skill-card {
+                padding: 1.5rem;
+            }
+            
+            .career-timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                text-align: left !important;
+                padding-left: 60px;
+            }
+            
+            .timeline-icon {
+                left: -10px !important;
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+            
+            .timeline-content {
+                padding: 1.5rem;
+            }
+            
+            .experience-selector {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .level-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .chart-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            
+            .bar-label {
+                min-width: auto;
+            }
+            
+            .bar-container {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .skill-card {
+                padding: 1rem;
+            }
+            
+            .timeline-content {
+                padding: 1rem;
+            }
+            
+            .salary-chart {
+                padding: 1rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -23,7 +415,7 @@
     <header>
         <div class="header-container">
             <div class="logo">
-                <img class="logo img " src="Assets/imgs/logo 1.png" alt="">
+                <img class="logo img" src="Assets/imgs/logo 1.png" alt="Logo ImpactTech - Plataforma de Carreiras em Tecnologia">
                 <p class="logo" style="font-size: 40px;">impact</p> <span class="logo"
                     style="font-size: 40px;">Tech</span>
             </div>
@@ -75,8 +467,8 @@
             <section class="content-section">
                 <h2>Habilidades Essenciais</h2>
                 <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Linguagens de Programação</h3>
+                    <div class="skill-card">
+                        <h3><i class="fas fa-code skill-icon" aria-hidden="true"></i> Linguagens de Programação</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">Python</span>
                             <span class="skill-tag">JavaScript</span>
@@ -86,8 +478,8 @@
                             <span class="skill-tag">Rust</span>
                         </div>
                     </div>
-                    <div class="skill-category">
-                        <h3>Frameworks & Tecnologias</h3>
+                    <div class="skill-card">
+                        <h3><i class="fas fa-cogs skill-icon" aria-hidden="true"></i> Frameworks & Tecnologias</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">React</span>
                             <span class="skill-tag">Node.js</span>
@@ -97,8 +489,8 @@
                             <span class="skill-tag">Kubernetes</span>
                         </div>
                     </div>
-                    <div class="skill-category">
-                        <h3>Banco de Dados</h3>
+                    <div class="skill-card">
+                        <h3><i class="fas fa-database skill-icon" aria-hidden="true"></i> Banco de Dados</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">PostgreSQL</span>
                             <span class="skill-tag">MongoDB</span>
@@ -106,8 +498,8 @@
                             <span class="skill-tag">MySQL</span>
                         </div>
                     </div>
-                    <div class="skill-category">
-                        <h3>IA & Machine Learning</h3>
+                    <div class="skill-card">
+                        <h3><i class="fas fa-brain skill-icon" aria-hidden="true"></i> IA & Machine Learning</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">TensorFlow</span>
                             <span class="skill-tag">PyTorch</span>
@@ -118,48 +510,106 @@
                 </div>
             </section>
 
+            <!-- Experience Level Selector -->
+            <section class="content-section">
+                <h2>Habilidades por Nível de Experiência</h2>
+                <div class="experience-selector">
+                    <button class="level-btn active" data-level="junior">Júnior</button>
+                    <button class="level-btn" data-level="pleno">Pleno</button>
+                    <button class="level-btn" data-level="senior">Sênior</button>
+                </div>
+                
+                <div class="skills-highlight" id="skillsHighlight">
+                    <h3>Habilidades Essenciais - Nível Júnior</h3>
+                    <p>Foque nestas habilidades para começar sua carreira:</p>
+                    <div class="highlighted-skills" id="highlightedSkills">
+                        <span class="highlighted-skill">HTML/CSS</span>
+                        <span class="highlighted-skill">JavaScript</span>
+                        <span class="highlighted-skill">Python</span>
+                        <span class="highlighted-skill">Git</span>
+                        <span class="highlighted-skill">SQL</span>
+                        <span class="highlighted-skill">React</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Salary Chart Section -->
+            <section class="content-section">
+                <h2>Faixas Salariais por Nível</h2>
+                <div class="salary-chart">
+                    <div class="chart-bar">
+                        <div class="bar-label">Júnior (0-2 anos)</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 25%;" data-salary="R$ 3.500 - R$ 6.000">R$ 3.500 - R$ 6.000</div>
+                        </div>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="bar-label">Pleno (2-5 anos)</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 50%;" data-salary="R$ 6.000 - R$ 12.000">R$ 6.000 - R$ 12.000</div>
+                        </div>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="bar-label">Sênior (5-8 anos)</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 75%;" data-salary="R$ 12.000 - R$ 20.000">R$ 12.000 - R$ 20.000</div>
+                        </div>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="bar-label">Tech Lead (8+ anos)</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 100%;" data-salary="R$ 18.000 - R$ 35.000">R$ 18.000 - R$ 35.000</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- Career Path Section -->
             <section class="content-section">
                 <h2>Trajetória de Carreira</h2>
-                <div class="path-timeline">
-                    <div class="path-item">
-                        <div class="path-icon">
-                            <i class="fas fa-seedling"></i>
+                <div class="career-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-seedling" aria-hidden="true"></i>
                         </div>
-                        <div class="path-content">
+                        <div class="timeline-content">
                             <h3>Desenvolvedor Júnior</h3>
-                            <p>R$ 3.500 - R$ 6.000</p>
-                            <span>0-2 anos de experiência</span>
+                            <div class="salary-range">R$ 3.500 - R$ 6.000</div>
+                            <div class="experience-level">0-2 anos de experiência</div>
+                            <p>Início da carreira focado em aprender tecnologias fundamentais, trabalhar em projetos simples e desenvolver habilidades básicas de programação.</p>
                         </div>
                     </div>
-                    <div class="path-item">
-                        <div class="path-icon">
-                            <i class="fas fa-tree"></i>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-tree" aria-hidden="true"></i>
                         </div>
-                        <div class="path-content">
+                        <div class="timeline-content">
                             <h3>Desenvolvedor Pleno</h3>
-                            <p>R$ 6.000 - R$ 12.000</p>
-                            <span>2-5 anos de experiência</span>
+                            <div class="salary-range">R$ 6.000 - R$ 12.000</div>
+                            <div class="experience-level">2-5 anos de experiência</div>
+                            <p>Trabalha de forma independente em projetos complexos, mentora desenvolvedores júnior e participa de decisões técnicas importantes.</p>
                         </div>
                     </div>
-                    <div class="path-item">
-                        <div class="path-icon">
-                            <i class="fas fa-crown"></i>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-crown" aria-hidden="true"></i>
                         </div>
-                        <div class="path-content">
+                        <div class="timeline-content">
                             <h3>Desenvolvedor Sênior</h3>
-                            <p>R$ 12.000 - R$ 20.000</p>
-                            <span>5-8 anos de experiência</span>
+                            <div class="salary-range">R$ 12.000 - R$ 20.000</div>
+                            <div class="experience-level">5-8 anos de experiência</div>
+                            <p>Lidera projetos técnicos, define arquiteturas de software e é referência técnica para a equipe de desenvolvimento.</p>
                         </div>
                     </div>
-                    <div class="path-item">
-                        <div class="path-icon">
-                            <i class="fas fa-rocket"></i>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-rocket" aria-hidden="true"></i>
                         </div>
-                        <div class="path-content">
+                        <div class="timeline-content">
                             <h3>Tech Lead / Arquiteto</h3>
-                            <p>R$ 18.000 - R$ 35.000</p>
-                            <span>8+ anos de experiência</span>
+                            <div class="salary-range">R$ 18.000 - R$ 35.000</div>
+                            <div class="experience-level">8+ anos de experiência</div>
+                            <p>Responsável pela estratégia técnica da empresa, lidera múltiplas equipes e define padrões de desenvolvimento organizacionais.</p>
                         </div>
                     </div>
                 </div>
@@ -205,6 +655,89 @@
     </main>
 
     <script src="Assets/Javascript/logic.js"></script>
+    <script>
+        // Interactive Experience Level Selector
+        document.addEventListener('DOMContentLoaded', function() {
+            const levelButtons = document.querySelectorAll('.level-btn');
+            const skillsHighlight = document.getElementById('skillsHighlight');
+            const highlightedSkills = document.getElementById('highlightedSkills');
+            
+            const skillsByLevel = {
+                junior: {
+                    title: 'Habilidades Essenciais - Nível Júnior',
+                    description: 'Foque nestas habilidades para começar sua carreira:',
+                    skills: ['HTML/CSS', 'JavaScript', 'Python', 'Git', 'SQL', 'React']
+                },
+                pleno: {
+                    title: 'Habilidades Essenciais - Nível Pleno',
+                    description: 'Desenvolva estas competências para avançar na carreira:',
+                    skills: ['Node.js', 'Docker', 'AWS/Azure', 'MongoDB', 'API REST', 'Testes Automatizados', 'Scrum/Agile']
+                },
+                senior: {
+                    title: 'Habilidades Essenciais - Nível Sênior',
+                    description: 'Domine estas habilidades para liderar projetos:',
+                    skills: ['Arquitetura de Software', 'Kubernetes', 'Microserviços', 'DevOps', 'Machine Learning', 'Liderança Técnica', 'Mentoria']
+                }
+            };
+            
+            levelButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    levelButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Get selected level
+                    const level = this.getAttribute('data-level');
+                    const levelData = skillsByLevel[level];
+                    
+                    // Update content
+                    skillsHighlight.querySelector('h3').textContent = levelData.title;
+                    skillsHighlight.querySelector('p').textContent = levelData.description;
+                    
+                    // Update skills
+                    highlightedSkills.innerHTML = '';
+                    levelData.skills.forEach(skill => {
+                        const skillElement = document.createElement('span');
+                        skillElement.className = 'highlighted-skill';
+                        skillElement.textContent = skill;
+                        highlightedSkills.appendChild(skillElement);
+                    });
+                });
+            });
+            
+            // Animate salary bars on page load
+            setTimeout(() => {
+                const barFills = document.querySelectorAll('.bar-fill');
+                barFills.forEach(bar => {
+                    const width = bar.style.width;
+                    bar.style.width = '0%';
+                    setTimeout(() => {
+                        bar.style.width = width;
+                    }, 100);
+                });
+            }, 500);
+            
+            // Add intersection observer for timeline animation
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            timelineItems.forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(50px)';
+                item.style.transition = 'all 0.6s ease';
+                observer.observe(item);
+            });
+        });
+    </script>
 </body>
 
 </html>
