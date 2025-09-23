@@ -4,7 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Psicólogo - ImpactTech</title>
+    <title>Psicólogo com IA - Carreira em Psicologia e Tecnologia | ImpactTech</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Descubra a carreira de Psicólogo na era da IA. Áreas de atuação, salários, timeline de carreira e como a inteligência artificial está transformando a psicologia clínica, organizacional e educacional.">
+    <meta name="keywords" content="psicólogo, psicologia, IA, inteligência artificial, terapia online, chatbots terapêuticos, psicologia clínica, psicologia organizacional, carreira psicologia, salário psicólogo">
+    <meta name="author" content="ImpactTech">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Psicólogo com IA - Carreira em Psicologia e Tecnologia">
+    <meta property="og:description" content="Explore a carreira de Psicólogo na era da IA. Áreas de atuação, salários e como a tecnologia está revolucionando a saúde mental.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://impacttech.com.br/psicologo">
+    <meta property="og:image" content="https://impacttech.com.br/Assets/imgs/psicologo-og.jpg">
+    <meta property="og:site_name" content="ImpactTech">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Psicólogo com IA - Carreira em Psicologia e Tecnologia">
+    <meta name="twitter:description" content="Descubra como a IA está transformando a carreira de Psicólogo. Áreas de atuação, salários e oportunidades.">
+    <meta name="twitter:image" content="https://impacttech.com.br/Assets/imgs/psicologo-og.jpg">
+    
     <link rel="icon" type="image/svg+xml" href="Assets/imgs/favicon.svg">
     <link rel="shortcut icon" href="Assets/imgs/favicon.svg">
     <link rel="apple-touch-icon" href="Assets/imgs/favicon.svg">
@@ -16,13 +36,642 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="Assets/Css/career-page.css">
+    
+    <style>
+        /* Psychology-specific styles */
+        .psychology-areas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .area-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            color: white;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .area-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .area-card:hover::before {
+            opacity: 1;
+        }
+
+        .area-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .area-card:nth-child(1) {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .area-card:nth-child(2) {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .area-card:nth-child(3) {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .area-card:nth-child(4) {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+
+        .area-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .area-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .area-card p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #f8f9fa;
+            font-weight: 500;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Salary Chart */
+        .salary-chart {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin: 2rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .salary-chart h2 {
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .chart-bar {
+            margin-bottom: 1.5rem;
+        }
+
+        .bar-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .bar-label {
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .bar-value {
+            color: #ffd700;
+            font-weight: 700;
+            font-size: 1rem;
+            background: rgba(255, 215, 0, 0.2);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .bar-container {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            height: 50px;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 2s ease-in-out;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .bar-fill.junior { background: linear-gradient(90deg, #ff6b6b, #ee5a24); width: 0; }
+        .bar-fill.pleno { background: linear-gradient(90deg, #4834d4, #686de0); width: 0; }
+        .bar-fill.senior { background: linear-gradient(90deg, #00d2d3, #54a0ff); width: 0; }
+        .bar-fill.especialista { background: linear-gradient(90deg, #ff9ff3, #f368e0); width: 0; }
+        .bar-fill.pesquisador { background: linear-gradient(90deg, #feca57, #ff9ff3); width: 0; }
+
+        /* Career Timeline */
+        .career-timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 3rem 0;
+        }
+        
+        .career-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background: linear-gradient(to bottom, #ff6b6b, #4834d4, #00d2d3, #f368e0);
+            transform: translateX(-50%);
+            border-radius: 3px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin: 4rem 0;
+            width: 50%;
+            padding: 0 3rem;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            text-align: left;
+        }
+        
+        .timeline-content {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8ecff 100%);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            position: relative;
+            border: 2px solid rgba(255, 107, 107, 0.2);
+            transition: all 0.4s ease;
+        }
+        
+        .timeline-content:hover {
+            transform: scale(1.05);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+        }
+        
+        .timeline-icon {
+            position: absolute;
+            top: 50%;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            transform: translateY(-50%);
+            border: 6px solid white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+        
+        .timeline-item:nth-child(2) .timeline-icon {
+            background: linear-gradient(135deg, #4834d4, #686de0);
+        }
+        
+        .timeline-item:nth-child(3) .timeline-icon {
+            background: linear-gradient(135deg, #00d2d3, #54a0ff);
+        }
+        
+        .timeline-item:nth-child(4) .timeline-icon {
+            background: linear-gradient(135deg, #ff9ff3, #f368e0);
+        }
+        
+        .timeline-item:nth-child(5) .timeline-icon {
+            background: linear-gradient(135deg, #feca57, #ff9ff3);
+        }
+
+        /* AI Tools Section */
+        .ai-tools {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .ai-tool-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(102, 126, 234, 0.1);
+            cursor: pointer;
+        }
+
+        .ai-tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border-color: rgba(102, 126, 234, 0.3);
+        }
+
+        .ai-tool-card:focus {
+            outline: 3px solid #667eea;
+            outline-offset: 2px;
+        }
+
+        .ai-tool-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .ai-tool-card h3 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .ai-tool-card p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .ai-benefits {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8f0ff 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+        }
+
+        .ai-benefits h4 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .ai-benefits ul li {
+            margin-bottom: 1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .areas-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .area-card {
+                padding: 1.5rem;
+            }
+
+            .salary-chart {
+                padding: 1.5rem;
+                margin: 1.5rem 0;
+            }
+
+            .salary-chart h2 {
+                font-size: 1.5rem;
+            }
+
+            .bar-info {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .bar-value {
+                align-self: flex-end;
+            }
+
+            .enhanced-timeline {
+                padding: 1rem 0;
+            }
+
+            .timeline-line {
+                left: 40px;
+            }
+
+            .timeline-content {
+                width: calc(100% - 100px);
+                margin-left: 100px !important;
+            }
+
+            .timeline-icon {
+                left: 0;
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+
+            .ai-tools {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .ai-tool-card {
+                padding: 1.5rem;
+            }
+
+            .ai-benefits {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .area-card {
+                padding: 1rem;
+            }
+
+            .area-icon {
+                font-size: 2.5rem;
+            }
+
+            .salary-chart {
+                padding: 1rem;
+            }
+
+            .timeline-content {
+                padding: 1.5rem;
+            }
+
+            .ai-tool-card {
+                padding: 1rem;
+            }
+
+            .ai-tool-icon {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Accessibility Improvements */
+        .area-card:focus,
+        .ai-tool-card:focus {
+            outline: 3px solid #667eea;
+            outline-offset: 2px;
+        }
+
+        .bar-container {
+            position: relative;
+        }
+
+        .bar-container::after {
+            content: attr(aria-label);
+            position: absolute;
+            left: -9999px;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .area-card,
+            .ai-tool-card {
+                border: 2px solid #000;
+            }
+
+            .timeline-content {
+                border: 2px solid #000;
+            }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            .area-card,
+            .ai-tool-card,
+            .timeline-content,
+            .bar-fill {
+                transition: none;
+            }
+
+            .area-card:hover,
+            .ai-tool-card:hover {
+                transform: none;
+            }
+        }
+
+        
+        .timeline-item:nth-child(odd) .timeline-icon {
+            right: -42px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-icon {
+            left: -42px;
+        }
+
+        .timeline-content h3 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .timeline-content p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .salary-range {
+            color: #ff6b6b;
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin: 1rem 0;
+            display: block;
+        }
+
+        .experience-level {
+            color: #666;
+            font-style: italic;
+            font-size: 1rem;
+        }
+
+        /* AI Tools Section */
+        .ai-tools {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .ai-tool-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            color: white;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .ai-tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .ai-tool-card:nth-child(1) { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .ai-tool-card:nth-child(2) { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+        .ai-tool-card:nth-child(3) { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+        .ai-tool-card:nth-child(4) { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+
+        .ai-tool-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .ai-tool-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .ai-tool-card p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #f8f9fa;
+            font-weight: 500;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .psychology-areas {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .area-card {
+                padding: 1.5rem;
+            }
+
+            .timeline-line {
+                left: 30px;
+            }
+
+            .timeline-content {
+                width: calc(100% - 80px);
+                margin-left: 80px !important;
+            }
+
+            .timeline-icon {
+                left: -10px !important;
+                right: auto !important;
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+
+            .ai-tools {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .salary-chart {
+                padding: 1.5rem;
+            }
+
+            .bar-info {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .area-card {
+                padding: 1rem;
+            }
+
+            .area-icon {
+                font-size: 2.5rem;
+            }
+
+            .timeline-content {
+                padding: 1.5rem;
+            }
+
+            .ai-tool-card {
+                padding: 1.5rem;
+            }
+
+            .ai-tool-icon {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Accessibility */
+        .area-card:focus,
+        .ai-tool-card:focus,
+        .timeline-content:focus {
+            outline: 3px solid #667eea;
+            outline-offset: 2px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .area-card,
+            .ai-tool-card,
+            .bar-fill {
+                transition: none;
+            }
+        }
+
+        @media (prefers-contrast: high) {
+            .area-card,
+            .ai-tool-card,
+            .salary-chart {
+                border: 2px solid #000;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="header-container">
             <div class="logo">
-                <img class="logo img " src="Assets/imgs/logo 1.png" alt="">
+                <img class="logo img " src="Assets/imgs/logo 1.png" alt="Logo ImpactTech - Educação em Tecnologia">
                 <p class="logo" style="font-size: 40px;">impact</p> <span class="logo"
                     style="font-size: 40px;">Tech</span>
             </div>
@@ -69,22 +718,80 @@
                 <h2>O que faz um Psicólogo?</h2>
                 <p>O psicólogo é um profissional dedicado ao estudo e compreensão do comportamento humano, processos mentais e emocionais. Atua na promoção da saúde mental, prevenção de transtornos psicológicos e no desenvolvimento do potencial humano em diversas áreas da vida.</p>
                 
-                <!-- Highlights -->
-                <div class="career-highlights">
-                    <div class="highlight-card" style="text-align: center;">
-                        <div class="highlight-icon">🧠</div>
-                        <h3>Saúde Mental</h3>
-                        <p>Diagnóstico e tratamento de transtornos psicológicos</p>
+                <!-- Psychology Areas -->
+                <h3>Áreas de Atuação</h3>
+                <div class="psychology-areas">
+                    <div class="area-card" tabindex="0" role="button" aria-label="Psicologia Clínica">
+                        <div class="area-icon">🧠</div>
+                        <h3>Psicologia Clínica</h3>
+                        <p>Atendimento individual e em grupo, diagnóstico e tratamento de transtornos mentais, psicoterapia e acompanhamento psicológico.</p>
                     </div>
-                    <div class="highlight-card" style="text-align: center;">
-                        <div class="highlight-icon">👥</div>
-                        <h3>Desenvolvimento Humano</h3>
-                        <p>Apoio ao crescimento pessoal e profissional</p>
+                    <div class="area-card" tabindex="0" role="button" aria-label="Psicologia Educacional">
+                        <div class="area-icon">💬</div>
+                        <h3>Psicologia Educacional</h3>
+                        <p>Apoio ao processo de aprendizagem, orientação vocacional, desenvolvimento de habilidades socioemocionais em ambiente escolar.</p>
                     </div>
-                    <div class="highlight-card" style="text-align: center;">
-                        <div class="highlight-icon">🏢</div>
+                    <div class="area-card" tabindex="0" role="button" aria-label="Psicologia Organizacional">
+                        <div class="area-icon">🤝</div>
                         <h3>Psicologia Organizacional</h3>
-                        <p>Otimização do ambiente de trabalho e relações</p>
+                        <p>Gestão de pessoas, recrutamento e seleção, desenvolvimento organizacional, clima e cultura empresarial.</p>
+                    </div>
+                    <div class="area-card" tabindex="0" role="button" aria-label="Psicologia Esportiva">
+                        <div class="area-icon">🎯</div>
+                        <h3>Psicologia Esportiva</h3>
+                        <p>Preparação mental de atletas, controle de ansiedade, motivação, concentração e performance esportiva.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Salary Chart Section -->
+            <section class="content-section">
+                <div class="salary-chart">
+                    <h2>Faixas Salariais por Nível</h2>
+                    <div class="chart-bar">
+                        <div class="bar-info">
+                            <div class="bar-label">Estagiário (0-1 ano)</div>
+                            <div class="bar-value">R$ 1.200 - R$ 2.000</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 15%; background: linear-gradient(90deg, #ff6b6b, #ee5a24);" data-salary="R$ 1.200 - R$ 2.000"></div>
+                        </div>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="bar-info">
+                            <div class="bar-label">Júnior (1-3 anos)</div>
+                            <div class="bar-value">R$ 3.000 - R$ 4.500</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 30%; background: linear-gradient(90deg, #4834d4, #686de0);" data-salary="R$ 3.000 - R$ 4.500"></div>
+                        </div>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="bar-info">
+                            <div class="bar-label">Pleno (3-6 anos)</div>
+                            <div class="bar-value">R$ 4.500 - R$ 7.000</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 50%; background: linear-gradient(90deg, #00d2d3, #54a0ff);" data-salary="R$ 4.500 - R$ 7.000"></div>
+                        </div>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="bar-info">
+                            <div class="bar-label">Sênior (6-10 anos)</div>
+                            <div class="bar-value">R$ 7.000 - R$ 12.000</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 70%; background: linear-gradient(90deg, #ff9ff3, #f368e0);" data-salary="R$ 7.000 - R$ 12.000"></div>
+                        </div>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="bar-info">
+                            <div class="bar-label">Especialista/Doutor (10+ anos)</div>
+                            <div class="bar-value">R$ 12.000 - R$ 25.000</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 100%; background: linear-gradient(90deg, #feca57, #ff9ff3);" data-salary="R$ 12.000 - R$ 25.000"></div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -119,41 +826,60 @@
             <!-- Career Path Section -->
             <section class="content-section">
                 <h2>Trajetória de Carreira</h2>
-                <div class="path-timeline">
-                    <div class="path-item">
-                        <div class="path-icon">
+                <div class="career-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
                             <i class="fas fa-graduation-cap"></i>
                         </div>
-                        <div class="path-content">
-                            <h3>Graduação (5 anos)</h3>
-                            <p>Formação em Psicologia com estágios supervisionados em diferentes áreas</p>
+                        <div class="timeline-content">
+                            <h3>Estagiário em Psicologia</h3>
+                            <p>Início da jornada profissional com estágios supervisionados em diferentes áreas da psicologia, desenvolvendo competências básicas e conhecimento prático.</p>
+                            <span class="salary-range">R$ 1.200 - R$ 2.000</span>
+                            <span class="experience-level">0-1 ano de experiência</span>
                         </div>
                     </div>
-                    <div class="path-item">
-                        <div class="path-icon">
-                            <i class="fas fa-certificate"></i>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-seedling"></i>
                         </div>
-                        <div class="path-content">
-                            <h3>Registro no CRP</h3>
-                            <p>Obtenção do registro profissional no Conselho Regional de Psicologia</p>
-                        </div>
-                    </div>
-                    <div class="path-item">
-                        <div class="path-icon">
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="path-content">
-                            <h3>Especialização</h3>
-                            <p>Escolha de área específica: clínica, organizacional, educacional, hospitalar</p>
+                        <div class="timeline-content">
+                            <h3>Psicólogo Júnior</h3>
+                            <p>Registro no CRP e início da prática profissional. Desenvolvimento de habilidades em avaliação psicológica e técnicas terapêuticas básicas.</p>
+                            <span class="salary-range">R$ 3.000 - R$ 4.500</span>
+                            <span class="experience-level">1-3 anos de experiência</span>
                         </div>
                     </div>
-                    <div class="path-item">
-                        <div class="path-icon">
-                            <i class="fas fa-briefcase"></i>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-tree"></i>
                         </div>
-                        <div class="path-content">
-                            <h3>Prática Profissional</h3>
-                            <p>Atuação em consultórios, hospitais, empresas ou instituições educacionais</p>
+                        <div class="timeline-content">
+                            <h3>Psicólogo Pleno</h3>
+                            <p>Especialização em área específica, autonomia em casos complexos e desenvolvimento de abordagens terapêuticas personalizadas.</p>
+                            <span class="salary-range">R$ 4.500 - R$ 7.000</span>
+                            <span class="experience-level">3-6 anos de experiência</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Psicólogo Sênior</h3>
+                            <p>Expertise consolidada, supervisão de outros profissionais e liderança em projetos de saúde mental em organizações ou clínicas.</p>
+                            <span class="salary-range">R$ 7.000 - R$ 12.000</span>
+                            <span class="experience-level">6-10 anos de experiência</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Especialista/Doutor</h3>
+                            <p>Pesquisa científica, docência universitária, desenvolvimento de novas abordagens terapêuticas e integração de tecnologias como IA na prática psicológica.</p>
+                            <span class="salary-range">R$ 12.000 - R$ 25.000</span>
+                            <span class="experience-level">10+ anos de experiência</span>
                         </div>
                     </div>
                 </div>
@@ -163,19 +889,44 @@
             <h2>Impacto da IA na Psicologia</h2>
             <div class="ai-content">
                 <div class="ai-text">
-                    <p>A inteligência artificial está revolucionando a psicologia através de ferramentas de diagnóstico assistido, análise de padrões comportamentais e terapias digitais personalizadas.</p>
-                    <ul style="text-align: center; list-style: none; padding: 0;">
-                        <li>Análise preditiva de transtornos mentais</li>
-                        <li>Chatbots terapêuticos para suporte inicial</li>
-                        <li>Processamento de linguagem natural para análise de discurso</li>
-                        <li>Realidade virtual para tratamento de fobias</li>
-                    </ul>
+                    <p>A inteligência artificial está revolucionando a psicologia através de ferramentas de diagnóstico assistido, análise de padrões comportamentais e terapias digitais personalizadas, criando novas oportunidades para psicólogos especializados em tecnologia.</p>
                 </div>
-                <!-- <div class="ai-visual">
-                    <div class="ai-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                </div> -->
+            </div>
+            
+            <!-- AI Tools Section -->
+            <h3>Ferramentas de IA em Psicologia</h3>
+            <div class="ai-tools">
+                <div class="ai-tool-card" tabindex="0" role="button" aria-label="Terapia Online com IA">
+                    <div class="ai-tool-icon">💻</div>
+                    <h3>Terapia Online com IA</h3>
+                    <p>Plataformas que combinam sessões com psicólogos e assistentes de IA para monitoramento contínuo do bem-estar emocional e suporte entre sessões.</p>
+                </div>
+                <div class="ai-tool-card" tabindex="0" role="button" aria-label="Chatbots Terapêuticos">
+                    <div class="ai-tool-icon">🤖</div>
+                    <h3>Chatbots Terapêuticos</h3>
+                    <p>Assistentes virtuais especializados em primeiros socorros psicológicos, triagem inicial e apoio emocional 24/7 para situações de crise.</p>
+                </div>
+                <div class="ai-tool-card" tabindex="0" role="button" aria-label="Análise de Dados Comportamentais">
+                    <div class="ai-tool-icon">📊</div>
+                    <h3>Análise de Dados Comportamentais</h3>
+                    <p>Algoritmos que analisam padrões de comportamento, humor e linguagem para identificar sinais precoces de transtornos mentais.</p>
+                </div>
+                <div class="ai-tool-card" tabindex="0" role="button" aria-label="Realidade Virtual Terapêutica">
+                    <div class="ai-tool-icon">🥽</div>
+                    <h3>Realidade Virtual Terapêutica</h3>
+                    <p>Ambientes virtuais controlados para tratamento de fobias, PTSD, ansiedade social e treinamento de habilidades sociais.</p>
+                </div>
+            </div>
+            
+            <div class="ai-benefits">
+                <h4>Benefícios da IA para Psicólogos:</h4>
+                <ul style="text-align: left; max-width: 800px; margin: 0 auto;">
+                    <li><strong>Diagnóstico mais preciso:</strong> Análise de grandes volumes de dados para identificar padrões sutis</li>
+                    <li><strong>Monitoramento contínuo:</strong> Acompanhamento do progresso do paciente entre sessões</li>
+                    <li><strong>Personalização de tratamentos:</strong> Adaptação de terapias baseada em dados individuais</li>
+                    <li><strong>Acessibilidade ampliada:</strong> Atendimento remoto e suporte 24/7 para mais pessoas</li>
+                    <li><strong>Prevenção proativa:</strong> Identificação precoce de riscos à saúde mental</li>
+                </ul>
             </div>
         </section>
 
