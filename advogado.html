@@ -527,6 +527,161 @@
                 transform: none;
             }
         }
+
+        /* Modern Overview Section Styles */
+        .modern-overview {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .overview-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .main-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #c0392b, #8e44ad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .main-description {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .modern-highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .modern-highlight-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(192, 57, 43, 0.2);
+            transition: all 0.4s ease;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .modern-highlight-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #c0392b, #8e44ad);
+        }
+
+        .modern-highlight-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(192, 57, 43, 0.2);
+            border-color: rgba(192, 57, 43, 0.4);
+        }
+
+        .card-content {
+            padding: 2.5rem;
+        }
+
+        .icon-title-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .modern-icon {
+            font-size: 2.5rem;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #c0392b, #8e44ad);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(192, 57, 43, 0.3);
+        }
+
+        .highlight-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text);
+            margin: 0;
+            flex: 1;
+        }
+
+        .highlight-description {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin: 0;
+            opacity: 0.9;
+        }
+
+        /* Responsive Design for Modern Layout */
+        @media (max-width: 768px) {
+            .modern-highlights-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .main-title {
+                font-size: 2.2rem;
+            }
+
+            .main-description {
+                font-size: 1.1rem;
+            }
+
+            .card-content {
+                padding: 2rem;
+            }
+
+            .icon-title-wrapper {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .highlight-title {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .modern-overview {
+                padding: 3rem 1rem;
+            }
+
+            .main-title {
+                font-size: 1.8rem;
+            }
+
+            .modern-icon {
+                font-size: 2rem;
+                width: 50px;
+                height: 50px;
+            }
+
+            .card-content {
+                padding: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -578,26 +733,47 @@
             </section>
 
             <!-- Overview Section -->
-            <section class="content-section">
-                <h2>O que faz um Advogado?</h2>
-                <p>O advogado é um profissional do direito responsável por representar clientes, oferecer consultoria jurídica, elaborar documentos legais e defender interesses em processos judiciais. Na era digital, combina conhecimento jurídico tradicional com tecnologias inovadoras para oferecer serviços mais eficientes e acessíveis.</p>
+            <section class="content-section modern-overview">
+                <div class="overview-header">
+                    <h2 class="main-title">O que faz um Advogado?</h2>
+                    <p class="main-description">
+                        O advogado é um profissional do direito responsável por representar clientes, 
+                        oferecer consultoria jurídica, elaborar documentos legais e defender interesses 
+                        em processos judiciais. Na era digital, combina conhecimento jurídico tradicional 
+                        com tecnologias inovadoras para oferecer serviços mais eficientes e acessíveis.
+                    </p>
+                </div>
                 
-                <!-- Highlights -->
-                <div class="career-highlights">
-                    <div class="highlight-card">
-                        <div class="highlight-icon" style="text-align: center;">⚖️</div>
-                        <h3 style="text-align: center;">Direito Civil e Empresarial</h3>
-                        <p>Contratos, sociedades e relações comerciais</p>
+                <!-- Modern Career Highlights -->
+                <div class="modern-highlights-grid">
+                    <div class="modern-highlight-card">
+                        <div class="card-content">
+                            <div class="icon-title-wrapper">
+                                <div class="modern-icon">⚖️</div>
+                                <h3 class="highlight-title">Direito Civil e Empresarial</h3>
+                            </div>
+                            <p class="highlight-description">Contratos, sociedades e relações comerciais</p>
+                        </div>
                     </div>
-                    <div class="highlight-card">
-                        <div class="highlight-icon" style="text-align: center;">🏛️</div>
-                        <h3 style="text-align: center;">Direito Público</h3>
-                        <p>Administrativo, constitucional e tributário</p>
+                    
+                    <div class="modern-highlight-card">
+                        <div class="card-content">
+                            <div class="icon-title-wrapper">
+                                <div class="modern-icon">🏛️</div>
+                                <h3 class="highlight-title">Direito Público</h3>
+                            </div>
+                            <p class="highlight-description">Administrativo, constitucional e tributário</p>
+                        </div>
                     </div>
-                    <div class="highlight-card">
-                        <div class="highlight-icon" style="text-align: center;">🔒</div>
-                        <h3 style="text-align: center;">Direito Digital</h3>
-                        <p>Proteção de dados e crimes cibernéticos</p>
+                    
+                    <div class="modern-highlight-card">
+                        <div class="card-content">
+                            <div class="icon-title-wrapper">
+                                <div class="modern-icon">🔒</div>
+                                <h3 class="highlight-title">Direito Digital</h3>
+                            </div>
+                            <p class="highlight-description">Proteção de dados e crimes cibernéticos</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -607,7 +783,10 @@
                 <h2>Áreas de Especialização</h2>
                 <div class="skills-grid">
                     <div class="skill-card" tabindex="0" role="button" aria-label="Direito Civil">
-                        <h3><i class="fas fa-balance-scale skill-icon" aria-hidden="true"></i>Direito Civil</h3>
+                        <h3>
+                            <i class="fas fa-balance-scale skill-icon" aria-hidden="true"></i>
+                            Direito Civil
+                        </h3>
                         <div class="skill-tags">
                             <span class="skill-tag">Contratos</span>
                             <span class="skill-tag">Família</span>
@@ -618,7 +797,10 @@
                     </div>
                     
                     <div class="skill-card" tabindex="0" role="button" aria-label="Direito Penal">
-                        <h3><i class="fas fa-gavel skill-icon" aria-hidden="true"></i>Direito Penal</h3>
+                        <h3>
+                            <i class="fas fa-gavel skill-icon" aria-hidden="true"></i>
+                            Direito Penal
+                        </h3>
                         <div class="skill-tags">
                             <span class="skill-tag">Defesa Criminal</span>
                             <span class="skill-tag">Crimes Econômicos</span>
@@ -629,7 +811,10 @@
                     </div>
                     
                     <div class="skill-card" tabindex="0" role="button" aria-label="Direito Trabalhista">
-                        <h3><i class="fas fa-briefcase skill-icon" aria-hidden="true"></i>Direito Trabalhista</h3>
+                        <h3>
+                            <i class="fas fa-briefcase skill-icon" aria-hidden="true"></i>
+                            Direito Trabalhista
+                        </h3>
                         <div class="skill-tags">
                             <span class="skill-tag">CLT</span>
                             <span class="skill-tag">Rescisões</span>
@@ -640,7 +825,10 @@
                     </div>
                     
                     <div class="skill-card" tabindex="0" role="button" aria-label="Direito Digital">
-                        <h3><i class="fas fa-shield-alt skill-icon" aria-hidden="true"></i>Direito Digital</h3>
+                        <h3>
+                            <i class="fas fa-shield-alt skill-icon" aria-hidden="true"></i>
+                            Direito Digital
+                        </h3>
                         <div class="skill-tags">
                             <span class="skill-tag">LGPD</span>
                             <span class="skill-tag">Marco Civil</span>
@@ -666,6 +854,7 @@
                             <li>Oratória e argumentação</li>
                         </ul>
                     </div>
+                    
                     <div class="skill-category">
                         <h3>Habilidades Interpessoais</h3>
                         <ul>
@@ -1176,7 +1365,7 @@
         <h2>Pronto para Começar sua Jornada?</h2>
         <p>Junte-se ao Programa Jovem Programador do SENAC e transforme seu futuro com tecnologia e IA!</p>
         <div class="cta-buttons">
-            <a href="index.html#about" class="btn btn-primary">Saiba Mais</a>
+            <a href="https://www.jovemprogramador.com.br/" target="_blank" class="btn btn-primary">Saiba Mais</a>
             <a href="index.html" class="btn btn-secondary">Voltar ao Início</a>
         </div>
     </section>

@@ -4,6 +4,18 @@ document.getElementById('menuToggle').addEventListener('click', function() {
     document.getElementById('navMenu').classList.toggle('active');
 });
 
+// Logo Click Handler - Redirect to Home
+document.addEventListener('DOMContentLoaded', function() {
+    const logo = document.querySelector('.logo');
+    if (logo) {
+        logo.addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+        // Add cursor pointer style via JavaScript to avoid CSS changes
+        logo.style.cursor = 'pointer';
+    }
+});
+
 // Smooth Scroll for Navigation Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
