@@ -3,7 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cientista de Dados - ImpactTech</title>
+    <title>Cientista de Dados com IA - Carreira em Data Science | ImpactTech</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Descubra como se tornar um Cientista de Dados especializado em IA. Aprenda Python, R, Machine Learning, Big Data e construa uma carreira sólida em Data Science.">
+    <meta name="keywords" content="cientista de dados, data science, machine learning, python, R, SQL, big data, IA, carreira dados, salário cientista dados, análise preditiva, deep learning">
+    <meta name="author" content="ImpactTech">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Cientista de Dados com IA - Carreira em Data Science">
+    <meta property="og:description" content="Transforme sua carreira em Data Science. Aprenda as principais ferramentas de IA para cientistas de dados e construa uma trajetória de sucesso.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://impacttech.com.br/cientista-dados">
+    <meta property="og:image" content="https://impacttech.com.br/assets/imgs/cientista-dados-og.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cientista de Dados com IA - Carreira em Data Science">
+    <meta name="twitter:description" content="Descubra como a IA está revolucionando a ciência de dados e como você pode se destacar nessa área.">
+    <meta name="twitter:image" content="https://impacttech.com.br/assets/imgs/cientista-dados-twitter.jpg">
+    
     <link rel="icon" type="image/svg+xml" href="Assets/imgs/favicon.svg">
     <link rel="shortcut icon" href="Assets/imgs/favicon.svg">
     <link rel="apple-touch-icon" href="Assets/imgs/favicon.svg">
@@ -13,6 +32,433 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="Assets/Css/career-page.css">
+    
+    <style>
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skill-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .skill-card h3 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-icon {
+            font-size: 1.5rem;
+            color: #ffd700;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+        
+        /* Enhanced Timeline */
+        .career-timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 3rem 0;
+        }
+        
+        .career-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background: linear-gradient(to bottom, #ff6b6b, #4834d4, #00d2d3, #f368e0);
+            transform: translateX(-50%);
+            border-radius: 3px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin: 4rem 0;
+            width: 50%;
+            padding: 0 3rem;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            text-align: left;
+        }
+        
+        .timeline-content {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8ecff 100%);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            position: relative;
+            border: 2px solid rgba(255, 107, 107, 0.2);
+            transition: all 0.4s ease;
+        }
+        
+        .timeline-content:hover {
+            transform: scale(1.05);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+        }
+        
+        .timeline-icon {
+            position: absolute;
+            top: 50%;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            transform: translateY(-50%);
+            border: 6px solid white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+        
+        .timeline-item:nth-child(2) .timeline-icon {
+            background: linear-gradient(135deg, #4834d4, #686de0);
+        }
+        
+        .timeline-item:nth-child(3) .timeline-icon {
+            background: linear-gradient(135deg, #00d2d3, #54a0ff);
+        }
+        
+        .timeline-item:nth-child(4) .timeline-icon {
+            background: linear-gradient(135deg, #ff9ff3, #f368e0);
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-icon {
+            right: -42px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-icon {
+            left: -42px;
+        }
+        
+        .timeline-content h3 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .timeline-content p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .salary-range {
+            color: #ff6b6b;
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin: 1rem 0;
+            display: block;
+        }
+        
+        .experience-level {
+            color: #666;
+            font-style: italic;
+            font-size: 1rem;
+        }
+        
+        /* Salary Chart */
+        .salary-chart {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-top: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .salary-chart h2 {
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .chart-bar {
+            margin-bottom: 1.5rem;
+        }
+
+        .bar-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .bar-label {
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .bar-value {
+            color: #ffd700;
+            font-weight: 700;
+            font-size: 1rem;
+            background: rgba(255, 215, 0, 0.2);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .bar-container {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            height: 50px;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 2s ease-in-out;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 1rem;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .bar-fill.junior {
+            background: linear-gradient(90deg, #ff6b6b, #ee5a24);
+            width: 40%;
+        }
+        
+        .bar-fill.pleno {
+            background: linear-gradient(90deg, #4834d4, #686de0);
+            width: 65%;
+        }
+        
+        .bar-fill.senior {
+            background: linear-gradient(90deg, #00d2d3, #54a0ff);
+            width: 85%;
+        }
+        
+        .bar-fill.lead {
+            background: linear-gradient(90deg, #ff9ff3, #f368e0);
+            width: 100%;
+        }
+        
+        /* AI Tools Section */
+        .ai-tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .ai-tool-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            padding: 2rem;
+            color: white;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .ai-tool-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+        
+        .ai-tool-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .ai-tool-icon {
+            font-size: 1.8rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.6rem;
+            border-radius: 12px;
+        }
+        
+        .ai-tool-card p {
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .ai-tools-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .skill-card, .ai-tool-card {
+                padding: 1.5rem;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                text-align: left;
+                padding: 0 1rem 0 4rem;
+            }
+            
+            .career-timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-icon {
+                left: -20px !important;
+                right: auto !important;
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+            
+            .bar-info {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0.5rem;
+            }
+            
+            .bar-label {
+                text-align: center;
+            }
+
+            .salary-chart, .career-timeline {
+                padding: 1.5rem;
+            }
+
+            .bar-container {
+                height: 40px;
+            }
+
+            .bar-fill {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .skill-card, .ai-tool-card, .salary-chart, .career-timeline {
+                padding: 1rem;
+            }
+
+            .timeline-content {
+                padding: 1rem;
+            }
+
+            .skill-card h3, .timeline-content h3 {
+                font-size: 1.1rem;
+            }
+
+            .ai-tool-card h4 {
+                font-size: 1rem;
+            }
+        }
+
+        /* Animation for bars */
+        @keyframes fillBar {
+            from { width: 0%; }
+            to { width: var(--target-width); }
+        }
+
+        .bar-fill.animate {
+            animation: fillBar 2s ease-in-out;
+        }
+
+        /* Accessibility improvements */
+        .skill-card:focus,
+        .ai-tool-card:focus,
+        .timeline-content:focus {
+            outline: 2px solid #ffd700;
+            outline-offset: 2px;
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .skill-card, .ai-tool-card, .salary-chart, .career-timeline {
+                border: 2px solid #ffffff;
+            }
+
+            .skill-tag, .salary-range, .experience-level {
+                border: 1px solid #ffffff;
+            }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            .skill-card, .ai-tool-card, .timeline-content {
+                transition: none;
+            }
+
+            .bar-fill {
+                transition: none;
+            }
+
+            .skill-tag:hover {
+                transform: none;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -62,6 +508,49 @@
                 </div>
             </section>
 
+            <!-- Salary Chart Section -->
+            <section class="content-section">
+                <div class="salary-chart">
+                    <h2>💰 Evolução Salarial na Carreira</h2>
+                    <div class="chart-bar">
+                        <div class="bar-info">
+                            <span class="bar-label">Analista Júnior</span>
+                            <span class="bar-value">R$ 4.500 - R$ 7.000</span>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill junior"></div>
+                        </div>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="bar-info">
+                            <span class="bar-label">Cientista Pleno</span>
+                            <span class="bar-value">R$ 8.000 - R$ 12.000</span>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill pleno"></div>
+                        </div>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="bar-info">
+                            <span class="bar-label">Engenheiro ML</span>
+                            <span class="bar-value">R$ 12.000 - R$ 18.000</span>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill senior"></div>
+                        </div>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="bar-info">
+                            <span class="bar-label">Líder de Dados</span>
+                            <span class="bar-value">R$ 20.000 - R$ 35.000+</span>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill lead"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- Overview Section -->
             <section class="content-section">
                 <h2>O que faz um Cientista de Dados?</h2>
@@ -91,25 +580,49 @@
             <section class="content-section">
                 <h2>Competências Essenciais</h2>
                 <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Habilidades Técnicas</h3>
-                        <ul>
-                            <li>Python, R e SQL</li>
-                            <li>Machine Learning e Deep Learning</li>
-                            <li>Estatística e Matemática</li>
-                            <li>Big Data (Hadoop, Spark)</li>
-                            <li>Visualização (Tableau, Power BI)</li>
-                        </ul>
+                    <div class="skill-card">
+                        <h3><i class="fab fa-python skill-icon" aria-hidden="true"></i> Linguagens de Programação</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">R</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Scala</span>
+                            <span class="skill-tag">Julia</span>
+                            <span class="skill-tag">Java</span>
+                        </div>
                     </div>
-                    <div class="skill-category">
-                        <h3>Habilidades Analíticas</h3>
-                        <ul>
-                            <li>Pensamento crítico</li>
-                            <li>Resolução de problemas</li>
-                            <li>Comunicação de insights</li>
-                            <li>Storytelling com dados</li>
-                            <li>Conhecimento de negócios</li>
-                        </ul>
+                    <div class="skill-card">
+                        <h3><i class="fas fa-brain skill-icon" aria-hidden="true"></i> Machine Learning</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Scikit-learn</span>
+                            <span class="skill-tag">TensorFlow</span>
+                            <span class="skill-tag">PyTorch</span>
+                            <span class="skill-tag">Keras</span>
+                            <span class="skill-tag">XGBoost</span>
+                            <span class="skill-tag">LightGBM</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <h3><i class="fas fa-database skill-icon" aria-hidden="true"></i> Big Data & Cloud</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Hadoop</span>
+                            <span class="skill-tag">Spark</span>
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Azure</span>
+                            <span class="skill-tag">GCP</span>
+                            <span class="skill-tag">Databricks</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <h3><i class="fas fa-chart-bar skill-icon" aria-hidden="true"></i> Visualização & BI</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Tableau</span>
+                            <span class="skill-tag">Power BI</span>
+                            <span class="skill-tag">Matplotlib</span>
+                            <span class="skill-tag">Seaborn</span>
+                            <span class="skill-tag">Plotly</span>
+                            <span class="skill-tag">D3.js</span>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -117,41 +630,49 @@
             <!-- Career Path Section -->
             <section class="content-section">
                 <h2>Trajetória de Carreira</h2>
-                <div class="path-timeline">
-                    <div class="path-item">
-                        <div class="path-icon">
+                <div class="career-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
                             <i class="fas fa-chart-line"></i>
                         </div>
-                        <div class="path-content">
-                            <h3>Analista de Dados</h3>
-                            <p>Análises básicas e relatórios</p>
+                        <div class="timeline-content">
+                            <h3>Analista de Dados Júnior</h3>
+                            <p>Início da carreira focado em análises básicas, relatórios e visualizações simples. Desenvolvimento de habilidades fundamentais em SQL, Excel e ferramentas de BI.</p>
+                            <span class="salary-range">R$ 4.500 - R$ 7.000</span>
+                            <span class="experience-level">0-2 anos de experiência</span>
                         </div>
                     </div>
-                    <div class="path-item">
-                        <div class="path-icon">
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
                             <i class="fas fa-brain"></i>
                         </div>
-                        <div class="path-content">
-                            <h3>Cientista de Dados Júnior</h3>
-                            <p>Modelos preditivos e machine learning</p>
+                        <div class="timeline-content">
+                            <h3>Cientista de Dados Pleno</h3>
+                            <p>Desenvolvimento de modelos preditivos, machine learning e análises estatísticas avançadas. Domínio de Python/R e frameworks de ML.</p>
+                            <span class="salary-range">R$ 8.000 - R$ 12.000</span>
+                            <span class="experience-level">2-5 anos de experiência</span>
                         </div>
                     </div>
-                    <div class="path-item">
-                        <div class="path-icon">
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
                             <i class="fas fa-cogs"></i>
                         </div>
-                        <div class="path-content">
-                            <h3>Cientista de Dados Sênior</h3>
-                            <p>Projetos complexos e liderança técnica</p>
+                        <div class="timeline-content">
+                            <h3>Engenheiro de Machine Learning</h3>
+                            <p>Especialização em MLOps, deploy de modelos em produção, arquitetura de dados e sistemas distribuídos. Foco em escalabilidade e performance.</p>
+                            <span class="salary-range">R$ 12.000 - R$ 18.000</span>
+                            <span class="experience-level">5-8 anos de experiência</span>
                         </div>
                     </div>
-                    <div class="path-item">
-                        <div class="path-icon">
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
                             <i class="fas fa-crown"></i>
                         </div>
-                        <div class="path-content">
-                            <h3>Lead Data Scientist</h3>
-                            <p>Estratégia de dados e gestão de equipes</p>
+                        <div class="timeline-content">
+                            <h3>Líder de Dados / Chief Data Officer</h3>
+                            <p>Liderança estratégica em iniciativas de dados, gestão de equipes multidisciplinares e definição da arquitetura de dados organizacional.</p>
+                            <span class="salary-range">R$ 20.000 - R$ 35.000+</span>
+                            <span class="experience-level">8+ anos de experiência</span>
                         </div>
                     </div>
                 </div>
@@ -159,21 +680,95 @@
 
             <!-- AI Impact Section -->
             <section class="content-section">
-                <h2>Impacto da IA na Ciência de Dados</h2>
-                <div class="ai-content">
-                    <div class="ai-text">
-                        <p>A IA está revolucionando a ciência de dados com AutoML, processamento de linguagem natural avançado e algoritmos mais sofisticados. Ferramentas de IA automatizam tarefas repetitivas e permitem análises mais profundas e precisas.</p>
-                        <ul style="text-align: center; list-style: none; padding: 0;">
-                            <li>AutoML para automação de modelos</li>
-                            <li>Processamento de linguagem natural avançado</li>
-                            <li>Algoritmos de deep learning</li>
-                            <li>Análise preditiva em tempo real</li>
-                        </ul>
-                    </div>
-                    <div class="ai-visual">
-                        <div class="ai-icon">
-                            <i class="fas fa-database"></i>
+                <h2>🤖 A IA no Centro do Trabalho de Dados</h2>
+                <p>A Inteligência Artificial transformou a ciência de dados, colocando-se no centro de todas as operações modernas de análise e predição.</p>
+                
+                <div class="ai-categories">
+                    <div class="ai-category">
+                        <div class="ai-category-header">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Modelos Preditivos</h3>
                         </div>
+                        <div class="ai-tools-grid">
+                            <div class="ai-tool-card">
+                                <i class="fas fa-brain ai-tool-icon"></i>
+                                <h4>Regressão Avançada</h4>
+                                <p>Previsão de vendas, demanda e tendências de mercado</p>
+                            </div>
+                            <div class="ai-tool-card">
+                                <i class="fas fa-chart-area ai-tool-icon"></i>
+                                <h4>Séries Temporais</h4>
+                                <p>Análise de padrões temporais e sazonalidade</p>
+                            </div>
+                            <div class="ai-tool-card">
+                                <i class="fas fa-project-diagram ai-tool-icon"></i>
+                                <h4>Ensemble Methods</h4>
+                                <p>Random Forest, XGBoost, LightGBM para alta precisão</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ai-category">
+                        <div class="ai-category-header">
+                            <i class="fas fa-comments"></i>
+                            <h3>Processamento de Linguagem Natural (NLP)</h3>
+                        </div>
+                        <div class="ai-tools-grid">
+                            <div class="ai-tool-card">
+                                <i class="fas fa-heart ai-tool-icon"></i>
+                                <h4>Análise de Sentimento</h4>
+                                <p>Compreensão de opiniões em redes sociais e reviews</p>
+                            </div>
+                            <div class="ai-tool-card">
+                                <i class="fas fa-robot ai-tool-icon"></i>
+                                <h4>Chatbots Inteligentes</h4>
+                                <p>Assistentes virtuais com GPT e BERT</p>
+                            </div>
+                            <div class="ai-tool-card">
+                                <i class="fas fa-language ai-tool-icon"></i>
+                                <h4>Tradução Automática</h4>
+                                <p>Processamento multilíngue e localização</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ai-category">
+                        <div class="ai-category-header">
+                            <i class="fas fa-eye"></i>
+                            <h3>Visão Computacional</h3>
+                        </div>
+                        <div class="ai-tools-grid">
+                            <div class="ai-tool-card">
+                                <i class="fas fa-search ai-tool-icon"></i>
+                                <h4>Detecção de Objetos</h4>
+                                <p>Identificação automática em imagens e vídeos</p>
+                            </div>
+                            <div class="ai-tool-card">
+                                <i class="fas fa-user-check ai-tool-icon"></i>
+                                <h4>Reconhecimento Facial</h4>
+                                <p>Sistemas de segurança e autenticação biométrica</p>
+                            </div>
+                            <div class="ai-tool-card">
+                                <i class="fas fa-microscope ai-tool-icon"></i>
+                                <h4>Análise Médica</h4>
+                                <p>Diagnóstico por imagem e radiologia assistida</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ai-impact-stats">
+                    <div class="impact-stat">
+                        <span class="stat-number">85%</span>
+                        <span class="stat-label">das empresas usam IA para análise de dados</span>
+                    </div>
+                    <div class="impact-stat">
+                        <span class="stat-number">3x</span>
+                        <span class="stat-label">mais rápido processamento com AutoML</span>
+                    </div>
+                    <div class="impact-stat">
+                        <span class="stat-number">40%</span>
+                        <span class="stat-label">redução no tempo de desenvolvimento</span>
                     </div>
                 </div>
             </section>
@@ -187,5 +782,98 @@
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="Assets/Js/logic.js"></script>
+    
+    <script>
+        // Animação das barras do gráfico de salários
+        document.addEventListener('DOMContentLoaded', function() {
+            const bars = document.querySelectorAll('.bar-fill');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                });
+            });
+
+            bars.forEach(bar => {
+                observer.observe(bar);
+            });
+
+            // Adicionar interatividade aos cards de habilidades
+            const skillCards = document.querySelectorAll('.skill-card');
+            skillCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            // Adicionar interatividade aos cards de IA
+            const aiCards = document.querySelectorAll('.ai-tool-card');
+            aiCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                    this.style.boxShadow = '0 10px 25px rgba(0,0,0,0.15)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 4px 15px rgba(0,0,0,0.1)';
+                });
+            });
+
+            // Animação dos números das estatísticas
+            const stats = document.querySelectorAll('.stat-number');
+            const statsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = entry.target;
+                        const text = target.textContent;
+                        if (text.includes('%')) {
+                            animateNumber(target, 0, parseInt(text), '%');
+                        } else if (text.includes('x')) {
+                            animateNumber(target, 0, parseInt(text), 'x');
+                        }
+                    }
+                });
+            });
+
+            stats.forEach(stat => {
+                statsObserver.observe(stat);
+            });
+
+            function animateNumber(element, start, end, suffix) {
+                const duration = 2000;
+                const startTime = performance.now();
+                
+                function update(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const current = Math.floor(start + (end - start) * progress);
+                    element.textContent = current + suffix;
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    }
+                }
+                
+                requestAnimationFrame(update);
+            }
+        });
+
+        // Função para melhorar acessibilidade com teclado
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Tab') {
+                document.body.classList.add('keyboard-navigation');
+            }
+        });
+
+        document.addEventListener('mousedown', function() {
+            document.body.classList.remove('keyboard-navigation');
+        });
+    </script>
 </body>
 </html>
