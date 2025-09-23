@@ -1,7 +1,14 @@
 
 // Menu Mobile Toggle
-document.getElementById('menuToggle').addEventListener('click', function() {
-    document.getElementById('navMenu').classList.toggle('active');
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+        });
+    }
 });
 
 // Logo Click Handler - Redirect to Home
