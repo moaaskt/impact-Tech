@@ -146,6 +146,34 @@ const professionData = {
             </ul>
             <p>Com a IA, o cientista de dados pode focar na interpretação dos resultados e na geração de valor estratégico para o negócio, em vez de tarefas repetitivas.</p>
         `
+    },
+    agronomo: {
+        title: "Agrônomo",
+        content: `
+            <p>A IA está revolucionando a agricultura moderna, tornando-a mais eficiente e sustentável:</p>
+            <ul>
+                <li>Agricultura de precisão com drones e sensores IoT para monitoramento de culturas em tempo real.</li>
+                <li>Análise preditiva de condições climáticas e otimização de irrigação baseada em dados meteorológicos.</li>
+                <li>Detecção precoce de pragas e doenças através de visão computacional e análise de imagens.</li>
+                <li>Otimização do uso de fertilizantes e pesticidas com base em análise de solo e necessidades específicas das plantas.</li>
+                <li>Robôs agrícolas autônomos para plantio, colheita e manutenção de culturas.</li>
+            </ul>
+            <p>Os agrônomos agora podem tomar decisões mais precisas e sustentáveis, aumentando a produtividade enquanto reduzem o impacto ambiental.</p>
+        `
+    },
+    lawyer: {
+        title: "Advogado",
+        content: `
+            <p>A IA está transformando a prática jurídica, tornando-a mais eficiente e acessível:</p>
+            <ul>
+                <li>Análise automatizada de contratos e documentos legais para identificar cláusulas e riscos.</li>
+                <li>Pesquisa jurisprudencial inteligente que encontra precedentes relevantes em segundos.</li>
+                <li>Automação de tarefas repetitivas como elaboração de petições e documentos padronizados.</li>
+                <li>Análise preditiva de resultados de processos judiciais baseada em dados históricos.</li>
+                <li>Chatbots jurídicos para consultas iniciais e orientação legal básica.</li>
+            </ul>
+            <p>Os advogados podem focar mais na estratégia jurídica e no relacionamento com clientes, enquanto a IA cuida das tarefas operacionais.</p>
+        `
     }
 };
 
