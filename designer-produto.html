@@ -4,7 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Designer de Produto - ImpactTech</title>
+    <title>Designer de Produto com IA - Carreira em UX/UI Design | ImpactTech</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Descubra como se tornar um Designer de Produto especializado em IA. Aprenda UX/UI Design, ferramentas como Figma AI, MidJourney e construa uma carreira sólida no design digital.">
+    <meta name="keywords" content="designer de produto, UX design, UI design, design com IA, Figma AI, MidJourney, carreira design, salário designer, UX research, prototipagem">
+    <meta name="author" content="ImpactTech">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Designer de Produto com IA - Carreira em UX/UI Design">
+    <meta property="og:description" content="Transforme sua carreira no design digital. Aprenda as principais ferramentas de IA para designers e construa uma trajetória de sucesso.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://impacttech.com.br/designer-produto">
+    <meta property="og:image" content="https://impacttech.com.br/assets/imgs/designer-produto-og.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Designer de Produto com IA - Carreira em UX/UI Design">
+    <meta name="twitter:description" content="Descubra como a IA está revolucionando o design de produtos e como você pode se destacar nessa área.">
+    <meta name="twitter:image" content="https://impacttech.com.br/assets/imgs/designer-produto-twitter.jpg">
     <link rel="icon" type="image/svg+xml" href="Assets/imgs/favicon.svg">
     <link rel="shortcut icon" href="Assets/imgs/favicon.svg">
     <link rel="apple-touch-icon" href="Assets/imgs/favicon.svg">
@@ -16,6 +34,416 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="Assets/Css/career-page.css">
+    
+    <style>
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skill-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .skill-card h3 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-icon {
+            font-size: 1.5rem;
+            color: #ffd700;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+        
+        /* Enhanced Timeline */
+        .career-timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 3rem 0;
+        }
+        
+        .career-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background: linear-gradient(to bottom, #ff6b6b, #4834d4, #00d2d3, #f368e0);
+            transform: translateX(-50%);
+            border-radius: 3px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin: 4rem 0;
+            width: 50%;
+            padding: 0 3rem;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            text-align: left;
+        }
+        
+        .timeline-content {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8ecff 100%);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            position: relative;
+            border: 2px solid rgba(255, 107, 107, 0.2);
+            transition: all 0.4s ease;
+        }
+        
+        .timeline-content:hover {
+            transform: scale(1.05);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+        }
+        
+        .timeline-icon {
+            position: absolute;
+            top: 50%;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            transform: translateY(-50%);
+            border: 6px solid white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+        
+        .timeline-item:nth-child(2) .timeline-icon {
+            background: linear-gradient(135deg, #4834d4, #686de0);
+        }
+        
+        .timeline-item:nth-child(3) .timeline-icon {
+            background: linear-gradient(135deg, #00d2d3, #54a0ff);
+        }
+        
+        .timeline-item:nth-child(4) .timeline-icon {
+            background: linear-gradient(135deg, #ff9ff3, #f368e0);
+        }
+        
+        .timeline-item:nth-child(5) .timeline-icon {
+            background: linear-gradient(135deg, #feca57, #ff9ff3);
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-icon {
+            right: -42px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-icon {
+            left: -42px;
+        }
+        
+        .timeline-content h3 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .timeline-content p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .salary-range {
+            color: #ff6b6b;
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin: 1rem 0;
+            display: block;
+        }
+        
+        .experience-level {
+            color: #666;
+            font-style: italic;
+            font-size: 1rem;
+        }
+        
+        /* Salary Chart */
+        .salary-chart {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-top: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .salary-chart h2 {
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .chart-bar {
+            margin-bottom: 1.5rem;
+        }
+
+        .bar-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .bar-label {
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .bar-value {
+            color: #ffd700;
+            font-weight: 700;
+            font-size: 1rem;
+            background: rgba(255, 215, 0, 0.2);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .bar-container {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            height: 50px;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 2s ease-in-out;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .bar-fill:nth-child(1) {
+            background: linear-gradient(90deg, #ff6b6b, #ee5a24);
+        }
+        
+        /* AI Tools Section */
+        .ai-tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .ai-tool-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            padding: 2rem;
+            color: white;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .ai-tool-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+        
+        .ai-tool-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .ai-tool-icon {
+            font-size: 1.8rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.6rem;
+            border-radius: 12px;
+        }
+        
+        .ai-tool-card p {
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .ai-tools-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .skill-card, .ai-tool-card {
+                padding: 1.5rem;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                text-align: left;
+                padding: 0 1rem 0 4rem;
+            }
+            
+            .career-timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-icon {
+                left: -20px !important;
+                right: auto !important;
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+            
+            .chart-bar {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0.5rem;
+            }
+            
+            .bar-label {
+                min-width: auto;
+                text-align: center;
+            }
+
+            .salary-chart, .career-timeline {
+                padding: 1.5rem;
+            }
+
+            .bar-container {
+                height: 40px;
+            }
+
+            .bar-fill {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .skill-card, .ai-tool-card, .salary-chart, .career-timeline {
+                padding: 1rem;
+            }
+
+            .timeline-content {
+                padding: 1rem;
+            }
+
+            .skill-card h3, .timeline-content h3 {
+                font-size: 1.1rem;
+            }
+
+            .ai-tool-card h4 {
+                font-size: 1rem;
+            }
+        }
+
+        /* Animation for bars */
+        @keyframes fillBar {
+            from { width: 0%; }
+            to { width: var(--target-width); }
+        }
+
+        .bar-fill.animate {
+            animation: fillBar 2s ease-in-out;
+        }
+
+        /* Accessibility improvements */
+        .skill-card:focus,
+        .ai-tool-card:focus,
+        .timeline-content:focus {
+            outline: 2px solid #ffd700;
+            outline-offset: 2px;
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .skill-card, .ai-tool-card, .salary-chart, .career-timeline {
+                border: 2px solid #ffffff;
+            }
+
+            .skill-tag, .salary-range, .experience-level {
+                border: 1px solid #ffffff;
+            }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            .skill-card, .ai-tool-card, .timeline-content {
+                transition: none;
+            }
+
+            .bar-fill {
+                transition: none;
+            }
+
+            .skill-tag:hover {
+                transform: none;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -23,7 +451,7 @@
     <header>
         <div class="header-container">
             <div class="logo">
-                <img class="logo img " src="Assets/imgs/logo 1.png" alt="">
+                <img class="logo img" src="Assets/imgs/logo 1.png" alt="Logo ImpactTech - Educação em Tecnologia">
                 <p class="logo" style="font-size: 40px;">impact</p> <span class="logo"
                     style="font-size: 40px;">Tech</span>
             </div>
@@ -75,8 +503,8 @@
             <section class="content-section">
                 <h2>Habilidades Essenciais</h2>
                 <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Design & Prototipagem</h3>
+                    <div class="skill-card">
+                        <h3><i class="fas fa-palette skill-icon" aria-hidden="true"></i> Design & Prototipagem</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">Figma</span>
                             <span class="skill-tag">Adobe XD</span>
@@ -86,8 +514,8 @@
                             <span class="skill-tag">InVision</span>
                         </div>
                     </div>
-                    <div class="skill-category">
-                        <h3>UX Research</h3>
+                    <div class="skill-card">
+                        <h3><i class="fas fa-search skill-icon" aria-hidden="true"></i> UX Research</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">User Testing</span>
                             <span class="skill-tag">Analytics</span>
@@ -97,8 +525,8 @@
                             <span class="skill-tag">Heatmaps</span>
                         </div>
                     </div>
-                    <div class="skill-category">
-                        <h3>Desenvolvimento</h3>
+                    <div class="skill-card">
+                        <h3><i class="fas fa-code skill-icon" aria-hidden="true"></i> Desenvolvimento</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">HTML/CSS</span>
                             <span class="skill-tag">JavaScript</span>
@@ -106,13 +534,98 @@
                             <span class="skill-tag">Vue.js</span>
                         </div>
                     </div>
-                    <div class="skill-category">
-                        <h3>IA & Design</h3>
+                    <div class="skill-card">
+                        <h3><i class="fas fa-robot skill-icon" aria-hidden="true"></i> IA & Design</h3>
                         <div class="skill-tags">
+                            <span class="skill-tag">Figma AI</span>
                             <span class="skill-tag">Midjourney</span>
                             <span class="skill-tag">DALL-E</span>
                             <span class="skill-tag">ChatGPT</span>
                             <span class="skill-tag">Runway ML</span>
+                            <span class="skill-tag">Adobe Firefly</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- AI Tools Section -->
+            <section class="content-section">
+                <h2>Ferramentas de IA Revolucionando o Design</h2>
+                <div class="ai-tools-grid">
+                    <div class="ai-tool-card">
+                        <h4><i class="fas fa-magic ai-tool-icon" aria-hidden="true"></i> Figma AI</h4>
+                        <p>Geração automática de layouts, componentes e variações de design diretamente no Figma. Acelera o processo criativo e oferece sugestões inteligentes.</p>
+                    </div>
+                    <div class="ai-tool-card">
+                        <h4><i class="fas fa-image ai-tool-icon" aria-hidden="true"></i> MidJourney</h4>
+                        <p>Criação de imagens e conceitos visuais únicos através de prompts de texto. Perfeito para inspiração e criação de assets visuais.</p>
+                    </div>
+                    <div class="ai-tool-card">
+                        <h4><i class="fas fa-wand-magic-sparkles ai-tool-icon" aria-hidden="true"></i> Adobe Firefly</h4>
+                        <p>IA integrada aos produtos Adobe para geração de imagens, efeitos de texto e edição inteligente de fotos e ilustrações.</p>
+                    </div>
+                    <div class="ai-tool-card">
+                        <h4><i class="fas fa-comments ai-tool-icon" aria-hidden="true"></i> ChatGPT para Design</h4>
+                        <p>Assistente para brainstorming, criação de copy, análise de UX e geração de ideias criativas para projetos de design.</p>
+                    </div>
+                    <div class="ai-tool-card">
+                        <h4><i class="fas fa-video ai-tool-icon" aria-hidden="true"></i> Runway ML</h4>
+                        <p>Plataforma de IA para criação e edição de vídeos, animações e conteúdo visual dinâmico para interfaces e apresentações.</p>
+                    </div>
+                    <div class="ai-tool-card">
+                        <h4><i class="fas fa-chart-line ai-tool-icon" aria-hidden="true"></i> Hotjar AI</h4>
+                        <p>Análise inteligente de comportamento do usuário com insights automáticos para otimização de UX e conversão.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Salary Chart Section -->
+            <section class="content-section">
+                <div class="salary-chart">
+                    <h2>Faixas Salariais por Nível</h2>
+                    <div class="chart-bar">
+                        <div class="bar-info">
+                            <div class="bar-label">Estagiário (0-1 ano)</div>
+                            <div class="bar-value">R$ 1.500 - R$ 2.500</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 20%; background: linear-gradient(90deg, #ff6b6b, #ee5a24);" data-salary="R$ 1.500 - R$ 2.500"></div>
+                        </div>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="bar-info">
+                            <div class="bar-label">Júnior (1-3 anos)</div>
+                            <div class="bar-value">R$ 3.000 - R$ 5.500</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 35%; background: linear-gradient(90deg, #4834d4, #686de0);" data-salary="R$ 3.000 - R$ 5.500"></div>
+                        </div>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="bar-info">
+                            <div class="bar-label">Pleno (3-6 anos)</div>
+                            <div class="bar-value">R$ 5.500 - R$ 10.000</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 60%; background: linear-gradient(90deg, #00d2d3, #54a0ff);" data-salary="R$ 5.500 - R$ 10.000"></div>
+                        </div>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="bar-info">
+                            <div class="bar-label">Sênior (6-10 anos)</div>
+                            <div class="bar-value">R$ 10.000 - R$ 18.000</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 80%; background: linear-gradient(90deg, #ff9ff3, #f368e0);" data-salary="R$ 10.000 - R$ 18.000"></div>
+                        </div>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="bar-info">
+                            <div class="bar-label">Head of Design (10+ anos)</div>
+                            <div class="bar-value">R$ 15.000 - R$ 30.000</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 100%; background: linear-gradient(90deg, #feca57, #ff9ff3);" data-salary="R$ 15.000 - R$ 30.000"></div>
                         </div>
                     </div>
                 </div>
@@ -121,45 +634,60 @@
             <!-- Career Path Section -->
             <section class="content-section">
                 <h2>Trajetória de Carreira</h2>
-                <div class="path-timeline">
-                    <div class="path-item">
-                        <div class="path-icon">
+                <div class="career-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Estagiário em Design</h3>
+                            <p>Início da jornada no design digital, aprendendo ferramentas básicas e conceitos fundamentais de UX/UI.</p>
+                            <span class="salary-range">R$ 1.500 - R$ 2.500</span>
+                            <span class="experience-level">0-1 ano de experiência</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
                             <i class="fas fa-seedling"></i>
                         </div>
-                        <div class="path-content">
+                        <div class="timeline-content">
                             <h3>Designer Júnior</h3>
-                            <p>R$ 3.000 - R$ 5.500</p>
-                            <span>0-2 anos de experiência</span>
+                            <p>Desenvolvimento de habilidades em prototipagem, pesquisa básica de usuário e criação de interfaces simples.</p>
+                            <span class="salary-range">R$ 3.000 - R$ 5.500</span>
+                            <span class="experience-level">1-3 anos de experiência</span>
                         </div>
                     </div>
-                    <div class="path-item">
-                        <div class="path-icon">
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
                             <i class="fas fa-tree"></i>
                         </div>
-                        <div class="path-content">
+                        <div class="timeline-content">
                             <h3>Designer Pleno</h3>
-                            <p>R$ 5.500 - R$ 10.000</p>
-                            <span>2-5 anos de experiência</span>
+                            <p>Autonomia em projetos complexos, liderança de iniciativas de UX e domínio de ferramentas avançadas de design.</p>
+                            <span class="salary-range">R$ 5.500 - R$ 10.000</span>
+                            <span class="experience-level">3-6 anos de experiência</span>
                         </div>
                     </div>
-                    <div class="path-item">
-                        <div class="path-icon">
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
                             <i class="fas fa-crown"></i>
                         </div>
-                        <div class="path-content">
+                        <div class="timeline-content">
                             <h3>Designer Sênior</h3>
-                            <p>R$ 10.000 - R$ 18.000</p>
-                            <span>5-8 anos de experiência</span>
+                            <p>Especialista em design systems, mentoria de equipes e estratégia de produto com foco em experiência do usuário.</p>
+                            <span class="salary-range">R$ 10.000 - R$ 18.000</span>
+                            <span class="experience-level">6-10 anos de experiência</span>
                         </div>
                     </div>
-                    <div class="path-item">
-                        <div class="path-icon">
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
                             <i class="fas fa-rocket"></i>
                         </div>
-                        <div class="path-content">
+                        <div class="timeline-content">
                             <h3>Head of Design</h3>
-                            <p>R$ 15.000 - R$ 30.000</p>
-                            <span>8+ anos de experiência</span>
+                            <p>Liderança estratégica de design, visão de produto e gestão de equipes multidisciplinares em grandes organizações.</p>
+                            <span class="salary-range">R$ 15.000 - R$ 30.000</span>
+                            <span class="experience-level">10+ anos de experiência</span>
                         </div>
                     </div>
                 </div>
@@ -205,6 +733,84 @@
     </main>
 
     <script src="Assets/Javascript/logic.js"></script>
+    <script>
+        // Animate salary bars on scroll
+        function animateBars() {
+            const bars = document.querySelectorAll('.bar-fill');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            bars.forEach(bar => {
+                observer.observe(bar);
+            });
+        }
+
+        // Animate timeline items on scroll
+        function animateTimeline() {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            timelineItems.forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(30px)';
+                item.style.transition = 'all 0.6s ease';
+                observer.observe(item);
+            });
+        }
+
+        // Initialize animations when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            animateBars();
+            animateTimeline();
+
+            // Add keyboard navigation for cards
+            const cards = document.querySelectorAll('.skill-card, .ai-tool-card');
+            cards.forEach(card => {
+                card.setAttribute('tabindex', '0');
+                card.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        card.click();
+                    }
+                });
+            });
+
+            // Add ARIA labels for better accessibility
+            const skillCards = document.querySelectorAll('.skill-card');
+            skillCards.forEach((card, index) => {
+                const title = card.querySelector('h3').textContent;
+                card.setAttribute('aria-label', `Habilidade: ${title}`);
+                card.setAttribute('role', 'article');
+            });
+
+            const aiCards = document.querySelectorAll('.ai-tool-card');
+            aiCards.forEach((card, index) => {
+                const title = card.querySelector('h4').textContent;
+                card.setAttribute('aria-label', `Ferramenta de IA: ${title}`);
+                card.setAttribute('role', 'article');
+            });
+
+            // Add progress indication for salary bars
+            const salaryBars = document.querySelectorAll('.bar-fill');
+            salaryBars.forEach(bar => {
+                const salary = bar.getAttribute('data-salary');
+                bar.setAttribute('aria-label', `Faixa salarial: ${salary}`);
+                bar.setAttribute('role', 'progressbar');
+            });
+        });
+    </script>
 </body>
 
 </html>
