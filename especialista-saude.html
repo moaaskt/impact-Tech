@@ -4,7 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Especialista em Saúde - ImpactTech</title>
+    <title>Especialista em Saúde Digital com IA - Carreira em Medicina e Tecnologia | ImpactTech</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Descubra como se tornar um Especialista em Saúde Digital. Aprenda sobre telemedicina, IA médica, diagnósticos por imagem e construa uma carreira sólida na área da saúde tecnológica.">
+    <meta name="keywords" content="especialista saúde digital, telemedicina, IA médica, diagnóstico por imagem, enfermagem digital, medicina tecnológica, carreira saúde, salário médico, prontuário eletrônico">
+    <meta name="author" content="ImpactTech">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Especialista em Saúde Digital com IA - Carreira em Medicina e Tecnologia">
+    <meta property="og:description" content="Transforme sua carreira na saúde digital. Aprenda as principais tecnologias médicas e IA para revolucionar o cuidado com pacientes.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://impacttech.com.br/especialista-saude">
+    <meta property="og:image" content="https://impacttech.com.br/assets/imgs/especialista-saude-og.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Especialista em Saúde Digital com IA - Carreira em Medicina e Tecnologia">
+    <meta name="twitter:description" content="Descubra como a IA está revolucionando a medicina e como você pode se destacar na saúde digital.">
+    <meta name="twitter:image" content="https://impacttech.com.br/assets/imgs/especialista-saude-twitter.jpg">
+    
     <link rel="icon" type="image/svg+xml" href="Assets/imgs/favicon.svg">
     <link rel="shortcut icon" href="Assets/imgs/favicon.svg">
     <link rel="apple-touch-icon" href="Assets/imgs/favicon.svg">
@@ -16,6 +35,429 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="Assets/Css/career-page.css">
+    
+    <style>
+        /* Health Areas Cards */
+        .health-areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .area-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .area-card:nth-child(1) {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+        }
+
+        .area-card:nth-child(2) {
+            background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+        }
+
+        .area-card:nth-child(3) {
+            background: linear-gradient(135deg, #45b7d1 0%, #96c93d 100%);
+        }
+
+        .area-card:nth-child(4) {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .area-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .area-icon {
+            font-size: 3rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        .area-card h3 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .area-card p {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skill-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .skill-card h3 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-icon {
+            font-size: 1.5rem;
+            color: #ffd700;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+
+        /* Salary Chart */
+        .salary-chart {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .salary-chart h3 {
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+        }
+
+        .chart-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .chart-bar {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .bar-label {
+            min-width: 120px;
+            color: #ffffff;
+            font-weight: 500;
+        }
+
+        .bar-container {
+            flex: 1;
+            height: 30px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ffd700, #ff6b6b);
+            border-radius: 15px;
+            transition: width 2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 10px;
+        }
+
+        .bar-value {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        /* Enhanced Timeline */
+        .career-timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem 0;
+        }
+
+        .career-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            width: 100%;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: 0;
+            margin-right: 55%;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: 55%;
+            margin-right: 0;
+            text-align: left;
+        }
+
+        .timeline-content {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .timeline-icon {
+            position: absolute;
+            left: 50%;
+            top: 2rem;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+
+        .timeline-icon.level-1 { background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%); }
+        .timeline-icon.level-2 { background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%); }
+        .timeline-icon.level-3 { background: linear-gradient(135deg, #45b7d1 0%, #96c93d 100%); }
+        .timeline-icon.level-4 { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+        .timeline-icon.level-5 { background: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%); }
+
+        .timeline-content h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+
+        .salary-range {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-level {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-content p {
+            color: #34495e;
+            line-height: 1.6;
+        }
+
+        /* AI Tools Grid */
+        .ai-tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .ai-tool-card {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .ai-tool-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border-color: #667eea;
+        }
+
+        .ai-tool-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .ai-tool-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .ai-tool-card p {
+            color: #34495e;
+            line-height: 1.6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .health-areas-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .career-timeline::before {
+                left: 30px;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                margin-left: 70px;
+                margin-right: 0;
+                text-align: left;
+            }
+
+            .timeline-icon {
+                left: 30px;
+            }
+
+            .chart-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .bar-label {
+                min-width: auto;
+            }
+
+            .ai-tools-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .area-card,
+            .skill-card,
+            .ai-tool-card {
+                padding: 1.5rem;
+            }
+
+            .timeline-content {
+                padding: 1.5rem;
+            }
+
+            .salary-chart {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Accessibility Improvements */
+        .area-card:focus,
+        .skill-card:focus,
+        .ai-tool-card:focus,
+        .timeline-content:focus {
+            outline: 3px solid #667eea;
+            outline-offset: 2px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .area-card,
+            .skill-card,
+            .ai-tool-card,
+            .timeline-content,
+            .skill-tag {
+                transition: none;
+            }
+
+            .bar-fill {
+                transition: none;
+            }
+        }
+
+        @media (prefers-contrast: high) {
+            .area-card,
+            .skill-card {
+                border: 2px solid #ffffff;
+            }
+
+            .timeline-content,
+            .ai-tool-card {
+                border: 2px solid #000000;
+            }
+        }
+
+        /* Animation for bars */
+        @keyframes fillBar {
+            from { width: 0; }
+            to { width: var(--target-width); }
+        }
+
+        .bar-fill {
+            animation: fillBar 2s ease-in-out;
+        }
+    </style>
 </head>
 
 <body>
@@ -46,7 +488,7 @@
         <div class="container">
             <!-- Hero Section -->
             <section class="career-hero">
-                <h1 class="career-title">🏥 Especialista em Saúde</h1>
+                <h1 class="career-title">🏥 Especialista em Saúde Digital</h1>
                 <p class="career-subtitle">Revolucionando o cuidado médico com tecnologia e inteligência artificial</p>
                 
                 <div class="career-stats">
@@ -71,12 +513,47 @@
                 <p>O Especialista em Saúde Digital combina conhecimentos médicos com tecnologia para melhorar diagnósticos, tratamentos e cuidados preventivos. Com a IA, esta profissão está revolucionando a medicina através de diagnósticos assistidos, medicina personalizada e análise preditiva de saúde.</p>
             </section>
 
+            <!-- Health Areas Section -->
+            <section class="content-section">
+                <h2>Áreas da Saúde Digital</h2>
+                <div class="health-areas-grid">
+                    <div class="area-card">
+                        <div class="area-icon">
+                            <i class="fas fa-user-nurse"></i>
+                        </div>
+                        <h3>Enfermagem Digital</h3>
+                        <p>Cuidados assistidos por tecnologia, monitoramento remoto de pacientes e sistemas de alerta inteligentes para prevenção de complicações.</p>
+                    </div>
+                    <div class="area-card">
+                        <div class="area-icon">
+                            <i class="fas fa-stethoscope"></i>
+                        </div>
+                        <h3>Medicina Clínica</h3>
+                        <p>Diagnósticos assistidos por IA, análise de exames automatizada e medicina personalizada baseada em dados genéticos e histórico médico.</p>
+                    </div>
+                    <div class="area-card">
+                        <div class="area-icon">
+                            <i class="fas fa-laptop-medical"></i>
+                        </div>
+                        <h3>Telemedicina</h3>
+                        <p>Consultas virtuais, monitoramento remoto de sinais vitais e plataformas de comunicação médico-paciente com IA integrada.</p>
+                    </div>
+                    <div class="area-card">
+                        <div class="area-icon">
+                            <i class="fas fa-hospital"></i>
+                        </div>
+                        <h3>Gestão Hospitalar</h3>
+                        <p>Otimização de recursos hospitalares, gestão de leitos inteligente e sistemas de predição de demanda por serviços médicos.</p>
+                    </div>
+                </div>
+            </section>
+
             <!-- Skills Section -->
             <section class="content-section">
-                <h2>Habilidades Essenciais</h2>
+                <h2>Competências Essenciais</h2>
                 <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Conhecimento Médico</h3>
+                    <div class="skill-card">
+                        <h3><i class="fas fa-heartbeat skill-icon"></i>Conhecimento Médico</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">Anatomia</span>
                             <span class="skill-tag">Fisiologia</span>
@@ -86,8 +563,8 @@
                             <span class="skill-tag">Bioética</span>
                         </div>
                     </div>
-                    <div class="skill-category">
-                        <h3>Tecnologia em Saúde</h3>
+                    <div class="skill-card">
+                        <h3><i class="fas fa-laptop-medical skill-icon"></i>Tecnologia em Saúde</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">Telemedicina</span>
                             <span class="skill-tag">Prontuário Eletrônico</span>
@@ -97,22 +574,75 @@
                             <span class="skill-tag">Cloud Computing</span>
                         </div>
                     </div>
-                    <div class="skill-category">
-                        <h3>Análise de Dados</h3>
+                    <div class="skill-card">
+                        <h3><i class="fas fa-chart-line skill-icon"></i>Análise de Dados</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">Bioinformática</span>
                             <span class="skill-tag">Estatística Médica</span>
                             <span class="skill-tag">Python/R</span>
                             <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Big Data</span>
+                            <span class="skill-tag">Data Mining</span>
                         </div>
                     </div>
-                    <div class="skill-category">
-                        <h3>IA em Saúde</h3>
+                    <div class="skill-card">
+                        <h3><i class="fas fa-brain skill-icon"></i>IA em Saúde</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">Diagnóstico por IA</span>
                             <span class="skill-tag">Machine Learning</span>
                             <span class="skill-tag">Processamento de Imagens</span>
                             <span class="skill-tag">NLP Médico</span>
+                            <span class="skill-tag">Deep Learning</span>
+                            <span class="skill-tag">Computer Vision</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Salary Chart Section -->
+            <section class="content-section">
+                <div class="salary-chart">
+                    <h3><i class="fas fa-chart-bar"></i> Faixas Salariais por Especialização</h3>
+                    <div class="chart-container">
+                        <div class="chart-bar">
+                            <div class="bar-label">Enfermagem Digital</div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 60%;">
+                                    <span class="bar-value">R$ 4.500 - R$ 8.000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-label">Medicina Clínica</div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 85%;">
+                                    <span class="bar-value">R$ 8.000 - R$ 15.000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-label">Telemedicina</div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 70%;">
+                                    <span class="bar-value">R$ 6.000 - R$ 12.000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-label">Gestão Hospitalar</div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 90%;">
+                                    <span class="bar-value">R$ 10.000 - R$ 18.000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-label">Pesquisa & IA</div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 100%;">
+                                    <span class="bar-value">R$ 12.000 - R$ 25.000</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -120,46 +650,61 @@
 
             <!-- Career Path Section -->
             <section class="content-section">
-                <h2>Trajetória de Carreira</h2>
-                <div class="path-timeline">
-                    <div class="path-item">
-                        <div class="path-icon">
-                            <i class="fas fa-seedling"></i>
+                <h2>Trajetória de Carreira na Saúde Digital</h2>
+                <div class="career-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon level-1">
+                            <i class="fas fa-graduation-cap"></i>
                         </div>
-                        <div class="path-content">
-                            <h3>Analista de Saúde Digital</h3>
-                            <p>R$ 4.000 - R$ 7.000</p>
-                            <span>0-2 anos de experiência</span>
-                        </div>
-                    </div>
-                    <div class="path-item">
-                        <div class="path-icon">
-                            <i class="fas fa-tree"></i>
-                        </div>
-                        <div class="path-content">
-                            <h3>Especialista Pleno</h3>
-                            <p>R$ 7.000 - R$ 12.000</p>
-                            <span>2-5 anos de experiência</span>
+                        <div class="timeline-content">
+                            <h3>Formação Acadêmica</h3>
+                            <div class="salary-range">Investimento: R$ 80.000 - R$ 150.000</div>
+                            <div class="experience-level">4-6 anos de graduação</div>
+                            <p>Graduação em Medicina, Enfermagem, Biomedicina ou áreas correlatas. Especialização em Saúde Digital, Informática Médica ou Telemedicina. Certificações em tecnologias específicas.</p>
                         </div>
                     </div>
-                    <div class="path-item">
-                        <div class="path-icon">
-                            <i class="fas fa-crown"></i>
+                    <div class="timeline-item">
+                        <div class="timeline-icon level-2">
+                            <i class="fas fa-user-md"></i>
                         </div>
-                        <div class="path-content">
-                            <h3>Consultor Sênior</h3>
-                            <p>R$ 12.000 - R$ 20.000</p>
-                            <span>5-8 anos de experiência</span>
+                        <div class="timeline-content">
+                            <h3>Residência/Especialização</h3>
+                            <div class="salary-range">R$ 3.500 - R$ 6.000</div>
+                            <div class="experience-level">2-3 anos de residência</div>
+                            <p>Residência médica ou especialização em área específica. Treinamento em sistemas hospitalares, prontuário eletrônico e ferramentas de telemedicina. Primeiros contatos com IA médica.</p>
                         </div>
                     </div>
-                    <div class="path-item">
-                        <div class="path-icon">
+                    <div class="timeline-item">
+                        <div class="timeline-icon level-3">
+                            <i class="fas fa-stethoscope"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Especialista Júnior</h3>
+                            <div class="salary-range">R$ 7.000 - R$ 12.000</div>
+                            <div class="experience-level">2-5 anos de experiência</div>
+                            <p>Atuação em hospitais digitais, clínicas de telemedicina ou startups de saúde. Desenvolvimento de competências em análise de dados médicos e uso de ferramentas de IA para diagnóstico.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon level-4">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Especialista Sênior</h3>
+                            <div class="salary-range">R$ 12.000 - R$ 20.000</div>
+                            <div class="experience-level">5-10 anos de experiência</div>
+                            <p>Liderança de equipes multidisciplinares, desenvolvimento de protocolos de IA médica e consultoria para implementação de tecnologias em saúde. Publicações científicas e palestras.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon level-5">
                             <i class="fas fa-rocket"></i>
                         </div>
-                        <div class="path-content">
-                            <h3>Diretor de Inovação</h3>
-                            <p>R$ 18.000 - R$ 35.000</p>
-                            <span>8+ anos de experiência</span>
+                        <div class="timeline-content">
+                            <h3>Diretor de Inovação/Pesquisador</h3>
+                            <div class="salary-range">R$ 18.000 - R$ 35.000</div>
+                            <div class="experience-level">10+ anos de experiência</div>
+                            <p>Direção de centros de inovação em saúde, liderança de pesquisas em IA médica, desenvolvimento de novas tecnologias e soluções. Empreendedorismo em healthtechs.</p>
                         </div>
                     </div>
                 </div>
@@ -167,27 +712,49 @@
 
             <!-- AI Impact Section -->
             <section class="content-section">
-                <h2>Como a IA está Transformando a Profissão</h2>
-                <div class="impact-comparison">
-                    <div class="impact-before">
-                        <h3>🔴 Antes da IA</h3>
-                        <ul>
-                            <li>Diagnósticos baseados apenas em experiência</li>
-                            <li>Análise manual de exames e imagens</li>
-                            <li>Tratamentos padronizados</li>
-                            <li>Monitoramento limitado de pacientes</li>
-                            <li>Pesquisa médica demorada</li>
-                        </ul>
+                <h2>Como a IA está Revolucionando a Saúde</h2>
+                <div class="ai-tools-grid">
+                    <div class="ai-tool-card">
+                        <div class="ai-tool-icon">
+                            <i class="fas fa-x-ray"></i>
+                        </div>
+                        <h3>Diagnósticos por Imagem</h3>
+                        <p>IA analisa radiografias, tomografias e ressonâncias com precisão superior a 95%, detectando câncer, fraturas e anomalias em segundos.</p>
                     </div>
-                    <div class="impact-after">
-                        <h3>🟢 Com IA</h3>
-                        <ul>
-                            <li>Diagnósticos assistidos por IA com maior precisão</li>
-                            <li>Análise automática de radiografias e exames</li>
-                            <li>Medicina personalizada baseada em genética</li>
-                            <li>Monitoramento contínuo com wearables</li>
-                            <li>Descoberta acelerada de medicamentos</li>
-                        </ul>
+                    <div class="ai-tool-card">
+                        <div class="ai-tool-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Análise Preditiva</h3>
+                        <p>Algoritmos preveem riscos de doenças, complicações pós-cirúrgicas e necessidade de internação com base em dados históricos e sinais vitais.</p>
+                    </div>
+                    <div class="ai-tool-card">
+                        <div class="ai-tool-icon">
+                            <i class="fas fa-file-medical-alt"></i>
+                        </div>
+                        <h3>Prontuário Eletrônico Inteligente</h3>
+                        <p>Sistemas que organizam automaticamente informações médicas, sugerem diagnósticos e alertam sobre interações medicamentosas.</p>
+                    </div>
+                    <div class="ai-tool-card">
+                        <div class="ai-tool-icon">
+                            <i class="fas fa-pills"></i>
+                        </div>
+                        <h3>Descoberta de Medicamentos</h3>
+                        <p>IA acelera o desenvolvimento de novos fármacos, reduzindo o tempo de pesquisa de 10-15 anos para 3-5 anos através de simulações moleculares.</p>
+                    </div>
+                    <div class="ai-tool-card">
+                        <div class="ai-tool-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>Cirurgia Robótica</h3>
+                        <p>Robôs cirúrgicos com IA realizam procedimentos minimamente invasivos com precisão milimétrica, reduzindo tempo de recuperação.</p>
+                    </div>
+                    <div class="ai-tool-card">
+                        <div class="ai-tool-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h3>Monitoramento Contínuo</h3>
+                        <p>Wearables e sensores IoT monitoram sinais vitais 24/7, alertando profissionais sobre emergências antes mesmo dos sintomas aparecerem.</p>
                     </div>
                 </div>
             </section>

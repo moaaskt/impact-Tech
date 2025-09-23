@@ -4,7 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robótica - ImpactTech</title>
+    <title>Especialista em Robótica - Carreira em Automação e IA | ImpactTech</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Descubra como se tornar um Especialista em Robótica. Aprenda automação industrial, drones, robôs sociais, IA embarcada e construa uma carreira sólida na robótica.">
+    <meta name="keywords" content="robótica, automação industrial, drones, robôs sociais, IA embarcada, carreira robótica, salário robótica, engenharia robótica, manufatura inteligente">
+    <meta name="author" content="ImpactTech">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Especialista em Robótica - Carreira em Automação e IA">
+    <meta property="og:description" content="Transforme sua carreira na robótica. Aprenda as principais tecnologias de automação e IA para construir uma trajetória de sucesso.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://impacttech.com.br/robotica">
+    <meta property="og:image" content="https://impacttech.com.br/assets/imgs/robotica-og.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Especialista em Robótica - Carreira em Automação e IA">
+    <meta name="twitter:description" content="Descubra como a robótica e IA estão revolucionando indústrias e como você pode se destacar nessa área.">
+    <meta name="twitter:image" content="https://impacttech.com.br/assets/imgs/robotica-twitter.jpg">
+    
     <link rel="icon" type="image/svg+xml" href="Assets/imgs/favicon.svg">
     <link rel="shortcut icon" href="Assets/imgs/favicon.svg">
     <link rel="apple-touch-icon" href="Assets/imgs/favicon.svg">
@@ -16,6 +35,453 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="Assets/Css/career-page.css">
+    
+    <style>
+        /* Robotics Areas Grid */
+        .robotics-areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .area-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            text-align: center;
+        }
+
+        .area-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .area-icon {
+            font-size: 3rem;
+            color: #ffd700;
+            margin-bottom: 1rem;
+        }
+
+        .area-card h3 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .area-card p {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skill-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .skill-card h3 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-icon {
+            font-size: 1.5rem;
+            color: #ffd700;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+        
+        /* Enhanced Timeline */
+        .career-timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 3rem 0;
+        }
+        
+        .career-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background: linear-gradient(to bottom, #ff6b6b, #4834d4, #00d2d3, #f368e0);
+            transform: translateX(-50%);
+            border-radius: 3px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin: 4rem 0;
+            width: 50%;
+            padding: 0 3rem;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            text-align: left;
+        }
+        
+        .timeline-content {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8ecff 100%);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            position: relative;
+            border: 2px solid rgba(255, 107, 107, 0.2);
+            transition: all 0.4s ease;
+        }
+        
+        .timeline-content:hover {
+            transform: scale(1.05);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+        }
+        
+        .timeline-icon {
+            position: absolute;
+            top: 50%;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            transform: translateY(-50%);
+            border: 6px solid white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+        
+        .timeline-item:nth-child(2) .timeline-icon {
+            background: linear-gradient(135deg, #4834d4, #686de0);
+        }
+        
+        .timeline-item:nth-child(3) .timeline-icon {
+            background: linear-gradient(135deg, #00d2d3, #54a0ff);
+        }
+        
+        .timeline-item:nth-child(4) .timeline-icon {
+            background: linear-gradient(135deg, #ff9ff3, #f368e0);
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-icon {
+            right: -42px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-icon {
+            left: -42px;
+        }
+        
+        .timeline-content h3 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .timeline-content p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .salary-range {
+            color: #ff6b6b;
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin: 1rem 0;
+            display: block;
+        }
+        
+        .experience-level {
+            color: #666;
+            font-style: italic;
+            font-size: 1rem;
+        }
+        
+        /* Salary Chart */
+        .salary-chart {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-top: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .salary-chart h2 {
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .chart-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .chart-bar {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .bar-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .bar-label {
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .bar-value {
+            color: #ffd700;
+            font-weight: 700;
+            font-size: 1rem;
+            background: rgba(255, 215, 0, 0.2);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .bar-container {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            height: 50px;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 2s ease-in-out;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(90deg, #ff6b6b, #ee5a24);
+        }
+        
+        /* AI Tools Section */
+        .ai-tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .ai-tool-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            padding: 2rem;
+            color: white;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .ai-tool-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+        
+        .ai-tool-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .ai-tool-icon {
+            font-size: 1.8rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.6rem;
+            border-radius: 12px;
+        }
+        
+        .ai-tool-card p {
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .skills-grid, .robotics-areas-grid, .ai-tools-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .skill-card, .area-card, .ai-tool-card {
+                padding: 1.5rem;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                text-align: left;
+                padding: 0 1rem 0 4rem;
+            }
+            
+            .career-timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-icon {
+                left: -20px !important;
+                right: auto !important;
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+            
+            .chart-bar {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0.5rem;
+            }
+            
+            .bar-label {
+                min-width: auto;
+                text-align: center;
+            }
+
+            .salary-chart, .career-timeline {
+                padding: 1.5rem;
+            }
+
+            .bar-container {
+                height: 40px;
+            }
+
+            .bar-fill {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .skill-card, .area-card, .ai-tool-card, .salary-chart, .career-timeline {
+                padding: 1rem;
+            }
+
+            .timeline-content {
+                padding: 1rem;
+            }
+
+            .skill-card h3, .timeline-content h3 {
+                font-size: 1.1rem;
+            }
+
+            .ai-tool-card h4 {
+                font-size: 1rem;
+            }
+        }
+
+        /* Animation for bars */
+        @keyframes fillBar {
+            from { width: 0%; }
+            to { width: var(--target-width); }
+        }
+
+        .bar-fill.animate {
+            animation: fillBar 2s ease-in-out;
+        }
+
+        /* Accessibility improvements */
+        .skill-card:focus,
+        .area-card:focus,
+        .ai-tool-card:focus,
+        .timeline-content:focus {
+            outline: 2px solid #ffd700;
+            outline-offset: 2px;
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .skill-card, .area-card, .ai-tool-card, .salary-chart, .career-timeline {
+                border: 2px solid #ffffff;
+            }
+
+            .skill-tag, .salary-range, .experience-level {
+                border: 1px solid #ffffff;
+            }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            .skill-card, .area-card, .ai-tool-card, .timeline-content {
+                transition: none;
+            }
+
+            .bar-fill {
+                transition: none;
+            }
+
+            .skill-tag:hover {
+                transform: none;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -70,23 +536,39 @@
             <section class="content-section">
                 <h2>O que faz um Especialista em Robótica?</h2>
                 <p>O especialista em robótica é responsável por projetar, desenvolver, testar e manter sistemas robóticos complexos. Combina conhecimentos de engenharia mecânica, eletrônica, programação e inteligência artificial para criar soluções automatizadas que revolucionam indústrias e melhoram a qualidade de vida.</p>
-                
-                <!-- Highlights -->
-                <div class="career-highlights">
-                    <div class="highlight-card">
-                        <div class="highlight-icon" style="text-align: center;">🤖</div>
-                        <h3 style="text-align: center;">Robótica Industrial</h3>
-                        <p>Automação de processos produtivos</p>
+            </section>
+
+            <!-- Robotics Areas Section -->
+            <section class="content-section">
+                <h2>Áreas da Robótica</h2>
+                <div class="robotics-areas-grid">
+                    <div class="area-card">
+                        <div class="area-icon">
+                            <i class="fas fa-industry" aria-hidden="true"></i>
+                        </div>
+                        <h3>Automação Industrial</h3>
+                        <p>Desenvolvimento de sistemas robóticos para linhas de produção, controle de qualidade e otimização de processos industriais.</p>
                     </div>
-                    <div class="highlight-card">
-                        <div class="highlight-icon" style="text-align: center;">🧠</div>
-                        <h3 style="text-align: center;">IA e Machine Learning</h3>
-                        <p>Sistemas inteligentes e adaptativos</p>
+                    <div class="area-card">
+                        <div class="area-icon">
+                            <i class="fas fa-helicopter" aria-hidden="true"></i>
+                        </div>
+                        <h3>Drones e Veículos Autônomos</h3>
+                        <p>Criação de drones para inspeção, entrega e monitoramento, além de sistemas de navegação autônoma.</p>
                     </div>
-                    <div class="highlight-card">
-                        <div class="highlight-icon" style="text-align: center;">⚙️</div>
-                        <h3 style="text-align: center;">Mecatrônica</h3>
-                        <p>Integração de sistemas mecânicos e eletrônicos</p>
+                    <div class="area-card">
+                        <div class="area-icon">
+                            <i class="fas fa-handshake" aria-hidden="true"></i>
+                        </div>
+                        <h3>Robôs Sociais</h3>
+                        <p>Desenvolvimento de robôs para interação humana em áreas como educação, saúde e assistência pessoal.</p>
+                    </div>
+                    <div class="area-card">
+                        <div class="area-icon">
+                            <i class="fas fa-microchip" aria-hidden="true"></i>
+                        </div>
+                        <h3>IA Embarcada</h3>
+                        <p>Integração de inteligência artificial em sistemas robóticos para tomada de decisão autônoma e aprendizado contínuo.</p>
                     </div>
                 </div>
             </section>
@@ -95,89 +577,176 @@
             <section class="content-section">
                 <h2>Competências Essenciais</h2>
                 <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Habilidades Técnicas</h3>
-                        <ul>
-                            <li>Programação (Python, C++, ROS)</li>
-                            <li>Visão computacional</li>
-                            <li>Controle de sistemas</li>
-                            <li>Machine Learning</li>
-                            <li>Eletrônica e sensores</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Habilidades Interpessoais</h3>
-                        <ul>
-                            <li>Resolução de problemas complexos</li>
-                            <li>Trabalho em equipe multidisciplinar</li>
-                            <li>Pensamento analítico</li>
-                            <li>Comunicação técnica</li>
-                            <li>Adaptabilidade tecnológica</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Career Path Section -->
-            <section class="content-section">
-                <h2>Trajetória de Carreira</h2>
-                <div class="path-timeline">
-                    <div class="path-item">
-                        <div class="path-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <div class="path-content">
-                            <h3>Estagiário em Robótica</h3>
-                            <p>Primeiros passos na área, aprendendo fundamentos</p>
+                    <div class="skill-card">
+                        <h3><i class="fas fa-code skill-icon" aria-hidden="true"></i> Programação & Controle</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">C++</span>
+                            <span class="skill-tag">ROS</span>
+                            <span class="skill-tag">MATLAB</span>
+                            <span class="skill-tag">Arduino</span>
+                            <span class="skill-tag">Raspberry Pi</span>
                         </div>
                     </div>
-                    <div class="path-item">
-                        <div class="path-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <div class="path-content">
-                            <h3>Desenvolvedor Robótico Júnior</h3>
-                            <p>Desenvolvimento de componentes e sistemas básicos</p>
-                        </div>
-                    </div>
-                    <div class="path-item">
-                        <div class="path-icon">
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="path-content">
-                            <h3>Engenheiro de Robótica Pleno</h3>
-                            <p>Liderança de projetos e desenvolvimento avançado</p>
+                    <div class="skill-card">
+                        <h3><i class="fas fa-eye skill-icon" aria-hidden="true"></i> Visão Computacional</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">OpenCV</span>
+                            <span class="skill-tag">TensorFlow</span>
+                            <span class="skill-tag">PyTorch</span>
+                            <span class="skill-tag">YOLO</span>
+                            <span class="skill-tag">Deep Learning</span>
+                            <span class="skill-tag">Image Processing</span>
                         </div>
                     </div>
-                    <div class="path-item">
-                        <div class="path-icon">
-                            <i class="fas fa-briefcase"></i>
+                    <div class="skill-card">
+                        <h3><i class="fas fa-cogs skill-icon" aria-hidden="true"></i> Mecatrônica</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">CAD/CAM</span>
+                            <span class="skill-tag">Sensores</span>
+                            <span class="skill-tag">Atuadores</span>
+                            <span class="skill-tag">Eletrônica</span>
+                            <span class="skill-tag">Sistemas Embarcados</span>
+                            <span class="skill-tag">Controle PID</span>
                         </div>
-                        <div class="path-content">
-                            <h3>Especialista Sênior</h3>
-                            <p>Arquitetura de sistemas complexos e inovação</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3><i class="fas fa-robot skill-icon" aria-hidden="true"></i> IA & Machine Learning</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Reinforcement Learning</span>
+                            <span class="skill-tag">Neural Networks</span>
+                            <span class="skill-tag">Path Planning</span>
+                            <span class="skill-tag">SLAM</span>
+                            <span class="skill-tag">Autonomous Navigation</span>
+                            <span class="skill-tag">Behavior Trees</span>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- AI Impact Section -->
+            <!-- Salary Chart Section -->
             <section class="content-section">
-                <h2>Impacto da IA na Robótica</h2>
-                <div class="ai-content">
-                    <div class="ai-text">
-                        <p>A Inteligência Artificial está revolucionando a robótica, criando sistemas mais autônomos, adaptativos e inteligentes. Robôs com IA podem aprender, tomar decisões complexas e interagir naturalmente com humanos.</p>
-                        <ul style="text-align: center; list-style: none; padding: 0;">
-                            <li>Robôs autônomos com aprendizado contínuo</li>
-                            <li>Visão computacional avançada</li>
-                            <li>Processamento de linguagem natural</li>
-                            <li>Tomada de decisão em tempo real</li>
-                        </ul>
-                    </div>
-                    <div class="ai-visual">
-                        <div class="ai-icon">
-                            <i class="fas fa-robot"></i>
+                <div class="salary-chart">
+                    <h2>Faixas Salariais por Nível</h2>
+                    <div class="chart-container">
+                        <div class="chart-bar">
+                            <div class="bar-info">
+                                <span class="bar-label">Técnico em Robótica</span>
+                                <span class="bar-value">R$ 4.500 - R$ 7.000</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 45%;"></div>
+                            </div>
                         </div>
+                        <div class="chart-bar">
+                            <div class="bar-info">
+                                <span class="bar-label">Engenheiro Robótico</span>
+                                <span class="bar-value">R$ 8.500 - R$ 15.000</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-info">
+                                <span class="bar-label">Pesquisador em Robótica</span>
+                                <span class="bar-value">R$ 12.000 - R$ 25.000</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-info">
+                                <span class="bar-label">Líder de Inovação</span>
+                                <span class="bar-value">R$ 20.000 - R$ 40.000</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Career Timeline Section -->
+            <section class="content-section">
+                <h2>Trajetória de Carreira em Robótica</h2>
+                <div class="career-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Técnico em Robótica</h3>
+                            <p>Início da carreira com foco em montagem, manutenção e operação de sistemas robóticos básicos. Aprendizado de fundamentos de eletrônica e programação.</p>
+                            <span class="salary-range">R$ 4.500 - R$ 7.000</span>
+                            <span class="experience-level">0-2 anos de experiência</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-cogs" aria-hidden="true"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Engenheiro Robótico</h3>
+                            <p>Desenvolvimento de projetos robóticos completos, desde a concepção até a implementação. Liderança de equipes técnicas e integração de sistemas complexos.</p>
+                            <span class="salary-range">R$ 8.500 - R$ 15.000</span>
+                            <span class="experience-level">3-7 anos de experiência</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-flask" aria-hidden="true"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Pesquisador em Robótica</h3>
+                            <p>Pesquisa e desenvolvimento de tecnologias inovadoras em robótica. Publicação de artigos científicos e colaboração com universidades e centros de pesquisa.</p>
+                            <span class="salary-range">R$ 12.000 - R$ 25.000</span>
+                            <span class="experience-level">8-15 anos de experiência</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Líder de Inovação</h3>
+                            <p>Direção estratégica de projetos de robótica em grandes corporações. Visão de futuro para implementação de tecnologias disruptivas e gestão de equipes multidisciplinares.</p>
+                            <span class="salary-range">R$ 20.000 - R$ 40.000</span>
+                            <span class="experience-level">15+ anos de experiência</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- AI and Robotics Integration Section -->
+            <section class="content-section">
+                <h2>Como IA e Robótica se Complementam</h2>
+                <div class="ai-tools-grid">
+                    <div class="ai-tool-card">
+                        <h4><i class="fas fa-car ai-tool-icon" aria-hidden="true"></i> Carros Autônomos</h4>
+                        <p>Integração de IA para processamento de dados de sensores, tomada de decisão em tempo real e navegação autônoma em ambientes complexos.</p>
+                    </div>
+                    <div class="ai-tool-card">
+                        <h4><i class="fas fa-user-md ai-tool-icon" aria-hidden="true"></i> Robôs Cirúrgicos</h4>
+                        <p>IA aplicada em cirurgias de precisão, análise de imagens médicas em tempo real e assistência inteligente para procedimentos complexos.</p>
+                    </div>
+                    <div class="ai-tool-card">
+                        <h4><i class="fas fa-industry ai-tool-icon" aria-hidden="true"></i> Manufatura Inteligente</h4>
+                        <p>Sistemas robóticos com IA para otimização de produção, manutenção preditiva e controle de qualidade automatizado.</p>
+                    </div>
+                    <div class="ai-tool-card">
+                        <h4><i class="fas fa-home ai-tool-icon" aria-hidden="true"></i> Robôs Domésticos</h4>
+                        <p>IA para reconhecimento de objetos, interação natural com humanos e adaptação a diferentes ambientes domésticos.</p>
+                    </div>
+                    <div class="ai-tool-card">
+                        <h4><i class="fas fa-seedling ai-tool-icon" aria-hidden="true"></i> Agricultura de Precisão</h4>
+                        <p>Robôs agrícolas com IA para monitoramento de culturas, aplicação precisa de defensivos e otimização de colheitas.</p>
+                    </div>
+                    <div class="ai-tool-card">
+                        <h4><i class="fas fa-rocket ai-tool-icon" aria-hidden="true"></i> Exploração Espacial</h4>
+                        <p>Robôs espaciais com IA para exploração autônoma, coleta de dados científicos e missões de longa duração sem intervenção humana.</p>
                     </div>
                 </div>
             </section>
