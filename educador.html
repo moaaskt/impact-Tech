@@ -3,7 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Educador - ImpactTech</title>
+    <title>Educador com IA - Carreira em Educação Digital | ImpactTech</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Descubra como se tornar um Educador especializado em tecnologias educacionais e IA. Aprenda sobre tutoria personalizada, gamificação e construa uma carreira sólida na educação digital.">
+    <meta name="keywords" content="educador, professor, educação digital, IA na educação, tutoria personalizada, gamificação, carreira educação, salário professor, tecnologias educacionais, ensino online">
+    <meta name="author" content="ImpactTech">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Educador com IA - Carreira em Educação Digital">
+    <meta property="og:description" content="Transforme sua carreira na educação digital. Aprenda as principais ferramentas de IA para educadores e construa uma trajetória de sucesso no ensino.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://impacttech.com.br/educador">
+    <meta property="og:image" content="https://impacttech.com.br/assets/imgs/educador-og.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Educador com IA - Carreira em Educação Digital">
+    <meta name="twitter:description" content="Descubra como a IA está revolucionando a educação e como você pode se destacar nessa área transformadora.">
+    <meta name="twitter:image" content="https://impacttech.com.br/assets/imgs/educador-twitter.jpg">
+    
     <link rel="icon" type="image/svg+xml" href="Assets/imgs/favicon.svg">
     <link rel="shortcut icon" href="Assets/imgs/favicon.svg">
     <link rel="apple-touch-icon" href="Assets/imgs/favicon.svg">
@@ -13,6 +32,500 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="Assets/Css/career-page.css">
+    
+    <style>
+        /* Educational Areas Cards */
+        .education-areas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .area-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            padding: 2rem;
+            color: white;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .area-card:nth-child(1) {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+        }
+        
+        .area-card:nth-child(2) {
+            background: linear-gradient(135deg, #4834d4 0%, #686de0 100%);
+        }
+        
+        .area-card:nth-child(3) {
+            background: linear-gradient(135deg, #00d2d3 0%, #54a0ff 100%);
+        }
+        
+        .area-card:nth-child(4) {
+            background: linear-gradient(135deg, #ff9ff3 0%, #f368e0 100%);
+        }
+        
+        .area-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+        
+        .area-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .area-icon {
+            font-size: 1.8rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.6rem;
+            border-radius: 12px;
+        }
+        
+        .area-card p {
+            line-height: 1.6;
+            opacity: 0.9;
+            color: #f8f9fa;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skill-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .skill-card h3 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-icon {
+            font-size: 1.5rem;
+            color: #ffd700;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+        
+        /* Enhanced Timeline */
+        .career-timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 3rem 0;
+        }
+        
+        .career-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background: linear-gradient(to bottom, #ff6b6b, #4834d4, #00d2d3, #f368e0, #feca57);
+            transform: translateX(-50%);
+            border-radius: 3px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin: 4rem 0;
+            width: 50%;
+            padding: 0 3rem;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            text-align: left;
+        }
+        
+        .timeline-content {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8ecff 100%);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            position: relative;
+            border: 2px solid rgba(255, 107, 107, 0.2);
+            transition: all 0.4s ease;
+        }
+        
+        .timeline-content:hover {
+            transform: scale(1.05);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+        }
+        
+        .timeline-icon {
+            position: absolute;
+            top: 50%;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            transform: translateY(-50%);
+            border: 6px solid white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+        
+        .timeline-item:nth-child(2) .timeline-icon {
+            background: linear-gradient(135deg, #4834d4, #686de0);
+        }
+        
+        .timeline-item:nth-child(3) .timeline-icon {
+            background: linear-gradient(135deg, #00d2d3, #54a0ff);
+        }
+        
+        .timeline-item:nth-child(4) .timeline-icon {
+            background: linear-gradient(135deg, #ff9ff3, #f368e0);
+        }
+        
+        .timeline-item:nth-child(5) .timeline-icon {
+            background: linear-gradient(135deg, #feca57, #ff9ff3);
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-icon {
+            right: -42px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-icon {
+            left: -42px;
+        }
+        
+        .timeline-content h3 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .timeline-content p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .salary-range {
+            color: #ff6b6b;
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin: 1rem 0;
+            display: block;
+        }
+        
+        .experience-level {
+            color: #666;
+            font-style: italic;
+            font-size: 1rem;
+        }
+        
+        /* Salary Chart */
+        .salary-chart {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-top: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .salary-chart h2 {
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .chart-bar {
+            margin-bottom: 1.5rem;
+        }
+
+        .bar-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .bar-label {
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .bar-value {
+            color: #ffd700;
+            font-weight: 700;
+            font-size: 1rem;
+            background: rgba(255, 215, 0, 0.2);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .bar-container {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            height: 50px;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 2s ease-in-out;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .bar-fill:nth-child(1) {
+            background: linear-gradient(90deg, #ff6b6b, #ee5a24);
+        }
+        
+        .bar-fill:nth-child(2) {
+            background: linear-gradient(90deg, #4834d4, #686de0);
+        }
+        
+        .bar-fill:nth-child(3) {
+            background: linear-gradient(90deg, #00d2d3, #54a0ff);
+        }
+        
+        .bar-fill:nth-child(4) {
+            background: linear-gradient(90deg, #ff9ff3, #f368e0);
+        }
+        
+        .bar-fill:nth-child(5) {
+            background: linear-gradient(90deg, #feca57, #ff9ff3);
+        }
+        
+        /* AI Tools Section */
+        .ai-tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .ai-tool-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            padding: 2rem;
+            color: white;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .ai-tool-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+        
+        .ai-tool-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .ai-tool-icon {
+            font-size: 1.8rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.6rem;
+            border-radius: 12px;
+        }
+        
+        .ai-tool-card p {
+            line-height: 1.6;
+            opacity: 0.9;
+            color: #f8f9fa;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .skills-grid, .education-areas {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .ai-tools-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .skill-card, .ai-tool-card, .area-card {
+                padding: 1.5rem;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                text-align: left;
+                padding: 0 1rem 0 4rem;
+            }
+            
+            .career-timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-icon {
+                left: -20px !important;
+                right: auto !important;
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+            
+            .chart-bar {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0.5rem;
+            }
+            
+            .bar-label {
+                min-width: auto;
+                text-align: center;
+            }
+
+            .salary-chart, .career-timeline {
+                padding: 1.5rem;
+            }
+
+            .bar-container {
+                height: 40px;
+            }
+
+            .bar-fill {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .skill-card, .ai-tool-card, .salary-chart, .career-timeline, .area-card {
+                padding: 1rem;
+            }
+
+            .timeline-content {
+                padding: 1rem;
+            }
+
+            .skill-card h3, .timeline-content h3, .area-card h3 {
+                font-size: 1.1rem;
+            }
+
+            .ai-tool-card h4 {
+                font-size: 1rem;
+            }
+        }
+
+        /* Animation for bars */
+        @keyframes fillBar {
+            from { width: 0%; }
+            to { width: var(--target-width); }
+        }
+
+        .bar-fill.animate {
+            animation: fillBar 2s ease-in-out;
+        }
+
+        /* Accessibility improvements */
+        .skill-card:focus,
+        .ai-tool-card:focus,
+        .timeline-content:focus,
+        .area-card:focus {
+            outline: 2px solid #ffd700;
+            outline-offset: 2px;
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .skill-card, .ai-tool-card, .salary-chart, .career-timeline, .area-card {
+                border: 2px solid #ffffff;
+            }
+
+            .skill-tag, .salary-range, .experience-level {
+                border: 1px solid #ffffff;
+            }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            .skill-card, .ai-tool-card, .timeline-content, .area-card {
+                transition: none;
+            }
+
+            .bar-fill {
+                transition: none;
+            }
+
+            .skill-tag:hover {
+                transform: none;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -67,22 +580,23 @@
                 <h2>O que faz um Educador?</h2>
                 <p>O educador é responsável por facilitar o processo de aprendizagem, desenvolvendo estratégias pedagógicas inovadoras e utilizando tecnologias educacionais para criar experiências de ensino significativas. Na era digital, combina métodos tradicionais com ferramentas tecnológicas para preparar estudantes para os desafios do futuro.</p>
                 
-                <!-- Highlights -->
-                <div class="career-highlights">
-                    <div class="highlight-card">
-                        <div class="highlight-icon" style="text-align: center;">📚</div>
-                        <h3 style="text-align: center;">Ensino Tradicional</h3>
-                        <p>Metodologias pedagógicas consolidadas</p>
+                <!-- Educational Areas -->
+                <div class="education-areas">
+                    <div class="area-card">
+                        <h3><i class="fas fa-book area-icon" aria-hidden="true"></i> Educação Básica</h3>
+                        <p>Ensino fundamental e médio, formação de base sólida em conhecimentos essenciais e desenvolvimento de habilidades cognitivas e socioemocionais.</p>
                     </div>
-                    <div class="highlight-card">
-                        <div class="highlight-icon" style="text-align: center;">💻</div>
-                        <h3 style="text-align: center;">Educação Digital</h3>
-                        <p>Tecnologias educacionais e EAD</p>
+                    <div class="area-card">
+                        <h3><i class="fas fa-laptop-code area-icon" aria-hidden="true"></i> Educação Tecnológica</h3>
+                        <p>Integração de tecnologias digitais no ensino, programação educacional, robótica pedagógica e letramento digital.</p>
                     </div>
-                    <div class="highlight-card">
-                        <div class="highlight-icon" style="text-align: center;">🎯</div>
-                        <h3 style="text-align: center;">Aprendizagem Personalizada</h3>
-                        <p>Adaptação às necessidades individuais</p>
+                    <div class="area-card">
+                        <h3><i class="fas fa-universal-access area-icon" aria-hidden="true"></i> Educação Inclusiva</h3>
+                        <p>Metodologias adaptadas para diferentes necessidades, tecnologias assistivas e promoção da diversidade no ambiente educacional.</p>
+                    </div>
+                    <div class="area-card">
+                        <h3><i class="fas fa-briefcase area-icon" aria-hidden="true"></i> Educação Corporativa</h3>
+                        <p>Treinamento e desenvolvimento profissional, capacitação empresarial e educação continuada para o mercado de trabalho.</p>
                     </div>
                 </div>
             </section>
@@ -91,25 +605,101 @@
             <section class="content-section">
                 <h2>Competências Essenciais</h2>
                 <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Habilidades Pedagógicas</h3>
-                        <ul>
-                            <li>Metodologias de ensino</li>
-                            <li>Planejamento curricular</li>
-                            <li>Avaliação educacional</li>
-                            <li>Psicologia da aprendizagem</li>
-                            <li>Gestão de sala de aula</li>
-                        </ul>
+                    <div class="skill-card">
+                        <h3><i class="fas fa-chalkboard-teacher skill-icon" aria-hidden="true"></i> Habilidades Pedagógicas</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Metodologias de Ensino</span>
+                            <span class="skill-tag">Planejamento Curricular</span>
+                            <span class="skill-tag">Avaliação Educacional</span>
+                            <span class="skill-tag">Psicologia da Aprendizagem</span>
+                            <span class="skill-tag">Gestão de Sala de Aula</span>
+                            <span class="skill-tag">Didática</span>
+                        </div>
                     </div>
-                    <div class="skill-category">
-                        <h3>Habilidades Digitais</h3>
-                        <ul>
-                            <li>Tecnologias educacionais</li>
-                            <li>Plataformas de ensino online</li>
-                            <li>Criação de conteúdo digital</li>
-                            <li>Gamificação educacional</li>
-                            <li>Análise de dados educacionais</li>
-                        </ul>
+                    <div class="skill-card">
+                        <h3><i class="fas fa-laptop skill-icon" aria-hidden="true"></i> Habilidades Digitais</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Tecnologias Educacionais</span>
+                            <span class="skill-tag">Plataformas EAD</span>
+                            <span class="skill-tag">Conteúdo Digital</span>
+                            <span class="skill-tag">Gamificação</span>
+                            <span class="skill-tag">Analytics Educacional</span>
+                            <span class="skill-tag">Realidade Virtual</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <h3><i class="fas fa-users skill-icon" aria-hidden="true"></i> Habilidades Sociais</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Comunicação</span>
+                            <span class="skill-tag">Empatia</span>
+                            <span class="skill-tag">Liderança</span>
+                            <span class="skill-tag">Trabalho em Equipe</span>
+                            <span class="skill-tag">Resolução de Conflitos</span>
+                            <span class="skill-tag">Mentoria</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <h3><i class="fas fa-robot skill-icon" aria-hidden="true"></i> IA & Educação</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">ChatGPT Educacional</span>
+                            <span class="skill-tag">Khan Academy</span>
+                            <span class="skill-tag">Duolingo AI</span>
+                            <span class="skill-tag">Coursera Plus</span>
+                            <span class="skill-tag">Socratic by Google</span>
+                            <span class="skill-tag">Gradescope</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Salary Chart Section -->
+            <section class="content-section">
+                <div class="salary-chart">
+                    <h2>Faixas Salariais por Região</h2>
+                    <div class="chart-bar">
+                        <div class="bar-info">
+                            <span class="bar-label">Sudeste (SP, RJ, MG)</span>
+                            <span class="bar-value">R$ 3.500 - R$ 8.500</span>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="bar-info">
+                            <span class="bar-label">Sul (RS, SC, PR)</span>
+                            <span class="bar-value">R$ 3.200 - R$ 7.800</span>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 78%;"></div>
+                        </div>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="bar-info">
+                            <span class="bar-label">Centro-Oeste (DF, GO, MT)</span>
+                            <span class="bar-value">R$ 3.000 - R$ 7.200</span>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 72%;"></div>
+                        </div>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="bar-info">
+                            <span class="bar-label">Nordeste (BA, PE, CE)</span>
+                            <span class="bar-value">R$ 2.800 - R$ 6.500</span>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 65%;"></div>
+                        </div>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="bar-info">
+                            <span class="bar-label">Norte (AM, PA, RO)</span>
+                            <span class="bar-value">R$ 2.500 - R$ 6.000</span>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 60%;"></div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -117,41 +707,60 @@
             <!-- Career Path Section -->
             <section class="content-section">
                 <h2>Trajetória de Carreira</h2>
-                <div class="path-timeline">
-                    <div class="path-item">
-                        <div class="path-icon">
+                <div class="career-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
                             <i class="fas fa-graduation-cap"></i>
                         </div>
-                        <div class="path-content">
+                        <div class="timeline-content">
                             <h3>Licenciatura</h3>
-                            <p>Formação em área específica ou Pedagogia</p>
+                            <p>Formação inicial em área específica ou Pedagogia, estágios supervisionados e desenvolvimento das competências pedagógicas fundamentais.</p>
+                            <span class="salary-range">R$ 2.500 - R$ 3.500</span>
+                            <span class="experience-level">0-2 anos de experiência</span>
                         </div>
                     </div>
-                    <div class="path-item">
-                        <div class="path-icon">
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
                             <i class="fas fa-chalkboard-teacher"></i>
                         </div>
-                        <div class="path-content">
+                        <div class="timeline-content">
                             <h3>Professor Iniciante</h3>
-                            <p>Primeiras experiências em sala de aula</p>
+                            <p>Primeiras experiências em sala de aula, adaptação às metodologias da instituição e desenvolvimento da prática pedagógica.</p>
+                            <span class="salary-range">R$ 3.000 - R$ 4.500</span>
+                            <span class="experience-level">2-5 anos de experiência</span>
                         </div>
                     </div>
-                    <div class="path-item">
-                        <div class="path-icon">
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
                             <i class="fas fa-star"></i>
                         </div>
-                        <div class="path-content">
+                        <div class="timeline-content">
                             <h3>Professor Experiente</h3>
-                            <p>Especialização e metodologias avançadas</p>
+                            <p>Especialização em metodologias avançadas, uso de tecnologias educacionais e liderança de projetos pedagógicos inovadores.</p>
+                            <span class="salary-range">R$ 4.500 - R$ 6.500</span>
+                            <span class="experience-level">5-10 anos de experiência</span>
                         </div>
                     </div>
-                    <div class="path-item">
-                        <div class="path-icon">
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Coordenador Pedagógico</h3>
+                            <p>Gestão de equipes educacionais, desenvolvimento curricular e implementação de políticas pedagógicas institucionais.</p>
+                            <span class="salary-range">R$ 6.000 - R$ 9.000</span>
+                            <span class="experience-level">8-15 anos de experiência</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
                             <i class="fas fa-briefcase"></i>
                         </div>
-                        <div class="path-content">
-                            <h3>Coordenador/Diretor</h3>
-                            <p>Liderança educacional e gestão</p>
+                        <div class="timeline-content">
+                            <h3>Diretor Educacional</h3>
+                            <p>Liderança estratégica da instituição, gestão administrativa e pedagógica, e desenvolvimento de políticas educacionais de longo prazo.</p>
+                            <span class="salary-range">R$ 8.000 - R$ 15.000</span>
+                            <span class="experience-level">10+ anos de experiência</span>
                         </div>
                     </div>
                 </div>
@@ -159,22 +768,32 @@
 
             <!-- AI Impact Section -->
             <section class="content-section">
-                <h2>Impacto da IA na Educação</h2>
-                <div class="ai-content">
-                    <div class="ai-text">
-                        <p>A Inteligência Artificial está revolucionando a educação com tutores virtuais, sistemas de aprendizagem adaptativa e análise preditiva do desempenho estudantil. Ferramentas de IA personalizam o ensino e automatizam tarefas administrativas, permitindo que educadores foquem no que fazem de melhor: inspirar e orientar.</p>
-                        <ul style="text-align: center; list-style: none; padding: 0;">
-                            <li>Tutores virtuais inteligentes</li>
-                            <li>Sistemas de aprendizagem adaptativa</li>
-                            <li>Análise preditiva de desempenho</li>
-                            <li>Automação de tarefas administrativas</li>
-                        </ul>
+                <h2>Como a IA está Transformando a Educação</h2>
+                <div class="ai-tools-grid">
+                    <div class="ai-tool-card">
+                        <h4><i class="fas fa-user-graduate ai-tool-icon" aria-hidden="true"></i> Tutoria Personalizada</h4>
+                        <p>Sistemas de IA que adaptam o conteúdo ao ritmo e estilo de aprendizagem de cada aluno, oferecendo suporte individualizado 24/7 e identificando lacunas de conhecimento.</p>
                     </div>
-                    <!-- <div class="ai-visual">
-                        <div class="ai-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                    </div> -->
+                    <div class="ai-tool-card">
+                        <h4><i class="fas fa-check-circle ai-tool-icon" aria-hidden="true"></i> Correção Automática</h4>
+                        <p>Ferramentas que avaliam automaticamente redações, exercícios e provas, fornecendo feedback detalhado e liberando tempo dos educadores para atividades mais estratégicas.</p>
+                    </div>
+                    <div class="ai-tool-card">
+                        <h4><i class="fas fa-gamepad ai-tool-icon" aria-hidden="true"></i> Gamificação Inteligente</h4>
+                        <p>Plataformas que criam experiências de aprendizagem gamificadas adaptativas, ajustando desafios e recompensas baseados no progresso individual do estudante.</p>
+                    </div>
+                    <div class="ai-tool-card">
+                        <h4><i class="fas fa-chart-line ai-tool-icon" aria-hidden="true"></i> Analytics Educacional</h4>
+                        <p>Análise preditiva do desempenho estudantil, identificação precoce de dificuldades de aprendizagem e otimização de estratégias pedagógicas baseadas em dados.</p>
+                    </div>
+                    <div class="ai-tool-card">
+                        <h4><i class="fas fa-language ai-tool-icon" aria-hidden="true"></i> Tradução e Acessibilidade</h4>
+                        <p>Ferramentas de IA que quebram barreiras linguísticas e de acessibilidade, tornando o conteúdo educacional disponível para estudantes com diferentes necessidades.</p>
+                    </div>
+                    <div class="ai-tool-card">
+                        <h4><i class="fas fa-brain ai-tool-icon" aria-hidden="true"></i> Assistentes Virtuais</h4>
+                        <p>Chatbots educacionais que respondem dúvidas dos alunos, auxiliam na organização de estudos e fornecem suporte administrativo aos educadores.</p>
+                    </div>
                 </div>
             </section>
 
